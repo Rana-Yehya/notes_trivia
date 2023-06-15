@@ -1,2 +1,2 @@
 # notes_flutter
- A notes app with domain design pattern and firestore
+ A domain driven design notes app with data saved in Firestore
