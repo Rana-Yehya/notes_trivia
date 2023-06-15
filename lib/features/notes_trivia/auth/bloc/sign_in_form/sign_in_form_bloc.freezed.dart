@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$SignInFormEvents {
+mixin _$SignInFormEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() registerWithEmailAndPasswordButtonPressed,
@@ -84,16 +84,16 @@ mixin _$SignInFormEvents {
 }
 
 /// @nodoc
-abstract class $SignInFormEventsCopyWith<$Res> {
-  factory $SignInFormEventsCopyWith(
-          SignInFormEvents value, $Res Function(SignInFormEvents) then) =
-      _$SignInFormEventsCopyWithImpl<$Res, SignInFormEvents>;
+abstract class $SignInFormEventCopyWith<$Res> {
+  factory $SignInFormEventCopyWith(
+          SignInFormEvent value, $Res Function(SignInFormEvent) then) =
+      _$SignInFormEventCopyWithImpl<$Res, SignInFormEvent>;
 }
 
 /// @nodoc
-class _$SignInFormEventsCopyWithImpl<$Res, $Val extends SignInFormEvents>
-    implements $SignInFormEventsCopyWith<$Res> {
-  _$SignInFormEventsCopyWithImpl(this._value, this._then);
+class _$SignInFormEventCopyWithImpl<$Res, $Val extends SignInFormEvent>
+    implements $SignInFormEventCopyWith<$Res> {
+  _$SignInFormEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -111,7 +111,7 @@ abstract class _$$RegisterWithEmailAndPasswordButtonPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$$RegisterWithEmailAndPasswordButtonPressedCopyWithImpl<$Res>
-    extends _$SignInFormEventsCopyWithImpl<$Res,
+    extends _$SignInFormEventCopyWithImpl<$Res,
         _$RegisterWithEmailAndPasswordButtonPressed>
     implements _$$RegisterWithEmailAndPasswordButtonPressedCopyWith<$Res> {
   __$$RegisterWithEmailAndPasswordButtonPressedCopyWithImpl(
@@ -128,7 +128,7 @@ class _$RegisterWithEmailAndPasswordButtonPressed
 
   @override
   String toString() {
-    return 'SignInFormEvents.registerWithEmailAndPasswordButtonPressed()';
+    return 'SignInFormEvent.registerWithEmailAndPasswordButtonPressed()';
   }
 
   @override
@@ -232,7 +232,7 @@ class _$RegisterWithEmailAndPasswordButtonPressed
 }
 
 abstract class RegisterWithEmailAndPasswordButtonPressed
-    implements SignInFormEvents {
+    implements SignInFormEvent {
   const factory RegisterWithEmailAndPasswordButtonPressed() =
       _$RegisterWithEmailAndPasswordButtonPressed;
 }
@@ -247,7 +247,7 @@ abstract class _$$LoginWithEmailAndPasswordButtonPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoginWithEmailAndPasswordButtonPressedCopyWithImpl<$Res>
-    extends _$SignInFormEventsCopyWithImpl<$Res,
+    extends _$SignInFormEventCopyWithImpl<$Res,
         _$LoginWithEmailAndPasswordButtonPressed>
     implements _$$LoginWithEmailAndPasswordButtonPressedCopyWith<$Res> {
   __$$LoginWithEmailAndPasswordButtonPressedCopyWithImpl(
@@ -264,7 +264,7 @@ class _$LoginWithEmailAndPasswordButtonPressed
 
   @override
   String toString() {
-    return 'SignInFormEvents.loginWithEmailAndPasswordButtonPressed()';
+    return 'SignInFormEvent.loginWithEmailAndPasswordButtonPressed()';
   }
 
   @override
@@ -368,7 +368,7 @@ class _$LoginWithEmailAndPasswordButtonPressed
 }
 
 abstract class LoginWithEmailAndPasswordButtonPressed
-    implements SignInFormEvents {
+    implements SignInFormEvent {
   const factory LoginWithEmailAndPasswordButtonPressed() =
       _$LoginWithEmailAndPasswordButtonPressed;
 }
@@ -383,7 +383,7 @@ abstract class _$$SignWithGoogleButtonPressedCopyWith<$Res> {
 
 /// @nodoc
 class __$$SignWithGoogleButtonPressedCopyWithImpl<$Res>
-    extends _$SignInFormEventsCopyWithImpl<$Res, _$SignWithGoogleButtonPressed>
+    extends _$SignInFormEventCopyWithImpl<$Res, _$SignWithGoogleButtonPressed>
     implements _$$SignWithGoogleButtonPressedCopyWith<$Res> {
   __$$SignWithGoogleButtonPressedCopyWithImpl(
       _$SignWithGoogleButtonPressed _value,
@@ -398,7 +398,7 @@ class _$SignWithGoogleButtonPressed implements SignWithGoogleButtonPressed {
 
   @override
   String toString() {
-    return 'SignInFormEvents.signWithGoogleButtonPressed()';
+    return 'SignInFormEvent.signWithGoogleButtonPressed()';
   }
 
   @override
@@ -501,7 +501,7 @@ class _$SignWithGoogleButtonPressed implements SignWithGoogleButtonPressed {
   }
 }
 
-abstract class SignWithGoogleButtonPressed implements SignInFormEvents {
+abstract class SignWithGoogleButtonPressed implements SignInFormEvent {
   const factory SignWithGoogleButtonPressed() = _$SignWithGoogleButtonPressed;
 }
 
@@ -516,7 +516,7 @@ abstract class _$$OnPasswordChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$$OnPasswordChangedCopyWithImpl<$Res>
-    extends _$SignInFormEventsCopyWithImpl<$Res, _$OnPasswordChanged>
+    extends _$SignInFormEventCopyWithImpl<$Res, _$OnPasswordChanged>
     implements _$$OnPasswordChangedCopyWith<$Res> {
   __$$OnPasswordChangedCopyWithImpl(
       _$OnPasswordChanged _value, $Res Function(_$OnPasswordChanged) _then)
@@ -546,7 +546,7 @@ class _$OnPasswordChanged implements OnPasswordChanged {
 
   @override
   String toString() {
-    return 'SignInFormEvents.onPasswordChanged(password: $password)';
+    return 'SignInFormEvent.onPasswordChanged(password: $password)';
   }
 
   @override
@@ -657,7 +657,7 @@ class _$OnPasswordChanged implements OnPasswordChanged {
   }
 }
 
-abstract class OnPasswordChanged implements SignInFormEvents {
+abstract class OnPasswordChanged implements SignInFormEvent {
   const factory OnPasswordChanged({required final String password}) =
       _$OnPasswordChanged;
 
@@ -678,7 +678,7 @@ abstract class _$$OnEmailChangedCopyWith<$Res> {
 
 /// @nodoc
 class __$$OnEmailChangedCopyWithImpl<$Res>
-    extends _$SignInFormEventsCopyWithImpl<$Res, _$OnEmailChanged>
+    extends _$SignInFormEventCopyWithImpl<$Res, _$OnEmailChanged>
     implements _$$OnEmailChangedCopyWith<$Res> {
   __$$OnEmailChangedCopyWithImpl(
       _$OnEmailChanged _value, $Res Function(_$OnEmailChanged) _then)
@@ -708,7 +708,7 @@ class _$OnEmailChanged implements OnEmailChanged {
 
   @override
   String toString() {
-    return 'SignInFormEvents.onEmailChanged(email: $email)';
+    return 'SignInFormEvent.onEmailChanged(email: $email)';
   }
 
   @override
@@ -818,7 +818,7 @@ class _$OnEmailChanged implements OnEmailChanged {
   }
 }
 
-abstract class OnEmailChanged implements SignInFormEvents {
+abstract class OnEmailChanged implements SignInFormEvent {
   const factory OnEmailChanged({required final String email}) =
       _$OnEmailChanged;
 

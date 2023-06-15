@@ -68,7 +68,7 @@ class _SignInViewState extends State<SignInView> {
                 onChanged: (value) {
                   context
                       .read<SignInFormBloc>()
-                      .add(SignInFormEvents.onEmailChanged(
+                      .add(SignInFormEvent.onEmailChanged(
                         email: value,
                       ));
                 },
@@ -104,7 +104,7 @@ class _SignInViewState extends State<SignInView> {
                 onChanged: (value) {
                   context
                       .read<SignInFormBloc>()
-                      .add(SignInFormEvents.onPasswordChanged(
+                      .add(SignInFormEvent.onPasswordChanged(
                         password: value,
                       ));
                 },
@@ -134,7 +134,7 @@ class _SignInViewState extends State<SignInView> {
                     child: TextButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(
-                              const SignInFormEvents
+                              const SignInFormEvent
                                   .registerWithEmailAndPasswordButtonPressed(),
                             );
                       },
@@ -145,7 +145,7 @@ class _SignInViewState extends State<SignInView> {
                     child: TextButton(
                       onPressed: () {
                         context.read<SignInFormBloc>().add(
-                              const SignInFormEvents
+                              const SignInFormEvent
                                   .loginWithEmailAndPasswordButtonPressed(),
                             );
                       },
@@ -158,7 +158,7 @@ class _SignInViewState extends State<SignInView> {
               TextButton(
                 onPressed: () {
                   context.read<SignInFormBloc>().add(
-                        const SignInFormEvents.signWithGoogleButtonPressed(),
+                        const SignInFormEvent.signWithGoogleButtonPressed(),
                       );
                 },
                 /*

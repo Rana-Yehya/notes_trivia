@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$NoteWatcherEvents {
+mixin _$NoteWatcherEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() watchAllStarted,
@@ -68,16 +68,16 @@ mixin _$NoteWatcherEvents {
 }
 
 /// @nodoc
-abstract class $NoteWatcherEventsCopyWith<$Res> {
-  factory $NoteWatcherEventsCopyWith(
-          NoteWatcherEvents value, $Res Function(NoteWatcherEvents) then) =
-      _$NoteWatcherEventsCopyWithImpl<$Res, NoteWatcherEvents>;
+abstract class $NoteWatcherEventCopyWith<$Res> {
+  factory $NoteWatcherEventCopyWith(
+          NoteWatcherEvent value, $Res Function(NoteWatcherEvent) then) =
+      _$NoteWatcherEventCopyWithImpl<$Res, NoteWatcherEvent>;
 }
 
 /// @nodoc
-class _$NoteWatcherEventsCopyWithImpl<$Res, $Val extends NoteWatcherEvents>
-    implements $NoteWatcherEventsCopyWith<$Res> {
-  _$NoteWatcherEventsCopyWithImpl(this._value, this._then);
+class _$NoteWatcherEventCopyWithImpl<$Res, $Val extends NoteWatcherEvent>
+    implements $NoteWatcherEventCopyWith<$Res> {
+  _$NoteWatcherEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -94,7 +94,7 @@ abstract class _$$WatchAllStartedCopyWith<$Res> {
 
 /// @nodoc
 class __$$WatchAllStartedCopyWithImpl<$Res>
-    extends _$NoteWatcherEventsCopyWithImpl<$Res, _$WatchAllStarted>
+    extends _$NoteWatcherEventCopyWithImpl<$Res, _$WatchAllStarted>
     implements _$$WatchAllStartedCopyWith<$Res> {
   __$$WatchAllStartedCopyWithImpl(
       _$WatchAllStarted _value, $Res Function(_$WatchAllStarted) _then)
@@ -108,7 +108,7 @@ class _$WatchAllStarted implements WatchAllStarted {
 
   @override
   String toString() {
-    return 'NoteWatcherEvents.watchAllStarted()';
+    return 'NoteWatcherEvent.watchAllStarted()';
   }
 
   @override
@@ -194,7 +194,7 @@ class _$WatchAllStarted implements WatchAllStarted {
   }
 }
 
-abstract class WatchAllStarted implements NoteWatcherEvents {
+abstract class WatchAllStarted implements NoteWatcherEvent {
   const factory WatchAllStarted() = _$WatchAllStarted;
 }
 
@@ -207,7 +207,7 @@ abstract class _$$WatchUncompletedStartedCopyWith<$Res> {
 
 /// @nodoc
 class __$$WatchUncompletedStartedCopyWithImpl<$Res>
-    extends _$NoteWatcherEventsCopyWithImpl<$Res, _$WatchUncompletedStarted>
+    extends _$NoteWatcherEventCopyWithImpl<$Res, _$WatchUncompletedStarted>
     implements _$$WatchUncompletedStartedCopyWith<$Res> {
   __$$WatchUncompletedStartedCopyWithImpl(_$WatchUncompletedStarted _value,
       $Res Function(_$WatchUncompletedStarted) _then)
@@ -221,7 +221,7 @@ class _$WatchUncompletedStarted implements WatchUncompletedStarted {
 
   @override
   String toString() {
-    return 'NoteWatcherEvents.watchUncompletedStarted()';
+    return 'NoteWatcherEvent.watchUncompletedStarted()';
   }
 
   @override
@@ -308,7 +308,7 @@ class _$WatchUncompletedStarted implements WatchUncompletedStarted {
   }
 }
 
-abstract class WatchUncompletedStarted implements NoteWatcherEvents {
+abstract class WatchUncompletedStarted implements NoteWatcherEvent {
   const factory WatchUncompletedStarted() = _$WatchUncompletedStarted;
 }
 
@@ -323,7 +323,7 @@ abstract class _$$NotesReceivedCopyWith<$Res> {
 
 /// @nodoc
 class __$$NotesReceivedCopyWithImpl<$Res>
-    extends _$NoteWatcherEventsCopyWithImpl<$Res, _$NotesReceived>
+    extends _$NoteWatcherEventCopyWithImpl<$Res, _$NotesReceived>
     implements _$$NotesReceivedCopyWith<$Res> {
   __$$NotesReceivedCopyWithImpl(
       _$NotesReceived _value, $Res Function(_$NotesReceived) _then)
@@ -353,7 +353,7 @@ class _$NotesReceived implements NotesReceived {
 
   @override
   String toString() {
-    return 'NoteWatcherEvents.notesReceived(failureOrNote: $failureOrNote)';
+    return 'NoteWatcherEvent.notesReceived(failureOrNote: $failureOrNote)';
   }
 
   @override
@@ -448,7 +448,7 @@ class _$NotesReceived implements NotesReceived {
   }
 }
 
-abstract class NotesReceived implements NoteWatcherEvents {
+abstract class NotesReceived implements NoteWatcherEvent {
   const factory NotesReceived(
           final Either<NotesFailure, KtList<NotesEntity>> failureOrNote) =
       _$NotesReceived;

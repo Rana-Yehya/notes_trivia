@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/failures/notes_failure.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/domain/repository/note_services.dart';
 import '../../domain/entities/data/notes_entity.dart';
-part 'note_actor_events.dart';
+part 'note_actor_event.dart';
 part 'note_actor_state.dart';
 
 part 'note_actor_bloc.freezed.dart';

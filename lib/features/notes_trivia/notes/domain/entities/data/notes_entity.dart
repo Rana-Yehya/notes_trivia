@@ -41,6 +41,4 @@ abstract class NotesEntity implements _$NotesEntity {
         )
         .fold((f) => some(f), (_) => none());
   }
-
-  where(Function(dynamic note) param0) {}
 }

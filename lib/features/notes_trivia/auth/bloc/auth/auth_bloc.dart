@@ -9,13 +9,13 @@ part 'auth_event.dart';
 part 'auth_state.dart';
 part 'auth_bloc.freezed.dart';
 
-@injectable
+//@injectable
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthService _authService;
   AuthBloc(this._authService) : super(const AuthState.initial()) {
     on<SignedOut>((event, emit) async {
       await _authService.logOut();
-      emit(const UnAuthenicatedAuthState());
+      emit(const AuthState.unAuthenicated());
     });
 
     on<AuthCheckRequested>((event, emit) async {

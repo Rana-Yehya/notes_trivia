@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$NoteActorEvents {
+mixin _$NoteActorEvent {
   NotesEntity get noteEntity => throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -51,15 +51,15 @@ mixin _$NoteActorEvents {
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $NoteActorEventsCopyWith<NoteActorEvents> get copyWith =>
+  $NoteActorEventCopyWith<NoteActorEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $NoteActorEventsCopyWith<$Res> {
-  factory $NoteActorEventsCopyWith(
-          NoteActorEvents value, $Res Function(NoteActorEvents) then) =
-      _$NoteActorEventsCopyWithImpl<$Res, NoteActorEvents>;
+abstract class $NoteActorEventCopyWith<$Res> {
+  factory $NoteActorEventCopyWith(
+          NoteActorEvent value, $Res Function(NoteActorEvent) then) =
+      _$NoteActorEventCopyWithImpl<$Res, NoteActorEvent>;
   @useResult
   $Res call({NotesEntity noteEntity});
 
@@ -67,9 +67,9 @@ abstract class $NoteActorEventsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$NoteActorEventsCopyWithImpl<$Res, $Val extends NoteActorEvents>
-    implements $NoteActorEventsCopyWith<$Res> {
-  _$NoteActorEventsCopyWithImpl(this._value, this._then);
+class _$NoteActorEventCopyWithImpl<$Res, $Val extends NoteActorEvent>
+    implements $NoteActorEventCopyWith<$Res> {
+  _$NoteActorEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -100,7 +100,7 @@ class _$NoteActorEventsCopyWithImpl<$Res, $Val extends NoteActorEvents>
 
 /// @nodoc
 abstract class _$$DeletedCopyWith<$Res>
-    implements $NoteActorEventsCopyWith<$Res> {
+    implements $NoteActorEventCopyWith<$Res> {
   factory _$$DeletedCopyWith(_$Deleted value, $Res Function(_$Deleted) then) =
       __$$DeletedCopyWithImpl<$Res>;
   @override
@@ -113,7 +113,7 @@ abstract class _$$DeletedCopyWith<$Res>
 
 /// @nodoc
 class __$$DeletedCopyWithImpl<$Res>
-    extends _$NoteActorEventsCopyWithImpl<$Res, _$Deleted>
+    extends _$NoteActorEventCopyWithImpl<$Res, _$Deleted>
     implements _$$DeletedCopyWith<$Res> {
   __$$DeletedCopyWithImpl(_$Deleted _value, $Res Function(_$Deleted) _then)
       : super(_value, _then);
@@ -142,7 +142,7 @@ class _$Deleted implements Deleted {
 
   @override
   String toString() {
-    return 'NoteActorEvents.deleted(noteEntity: $noteEntity)';
+    return 'NoteActorEvent.deleted(noteEntity: $noteEntity)';
   }
 
   @override
@@ -220,7 +220,7 @@ class _$Deleted implements Deleted {
   }
 }
 
-abstract class Deleted implements NoteActorEvents {
+abstract class Deleted implements NoteActorEvent {
   const factory Deleted(final NotesEntity noteEntity) = _$Deleted;
 
   @override

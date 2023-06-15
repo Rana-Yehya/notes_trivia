@@ -8,13 +8,12 @@ import '../../domain/entities/data/user_data_classes.dart';
 import '../../domain/entities/failures/auth_failure.dart';
 import '../../domain/repository/auth_service.dart';
 
-
 part 'sign_in_form_event.dart';
 part 'sign_in_form_state.dart';
 
 part 'sign_in_form_bloc.freezed.dart';
 
-@injectable
+//@injectable
 class SignInFormBloc extends Bloc<SignInFormEvent, SignInFormState> {
   final AuthService _authService;
   SignInFormBloc(this._authService) : super(SignInFormState.initial()) {

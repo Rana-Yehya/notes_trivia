@@ -15,66 +15,57 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$AuthEvents {
+mixin _$AuthEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signedOut,
     required TResult Function() authCheckRequested,
-    required TResult Function() initializeFirebase,
+    required TResult Function() signedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signedOut,
     TResult? Function()? authCheckRequested,
-    TResult? Function()? initializeFirebase,
+    TResult? Function()? signedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signedOut,
     TResult Function()? authCheckRequested,
-    TResult Function()? initializeFirebase,
+    TResult Function()? signedOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(SignedOutAuthEvent value) signedOut,
-    required TResult Function(AuthCheckRequestedAuthEvent value)
-        authCheckRequested,
-    required TResult Function(InitializeFirebaseAuthEvent value)
-        initializeFirebase,
+    required TResult Function(AuthCheckRequested value) authCheckRequested,
+    required TResult Function(SignedOut value) signedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SignedOutAuthEvent value)? signedOut,
-    TResult? Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult? Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
+    TResult? Function(AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(SignedOut value)? signedOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(SignedOutAuthEvent value)? signedOut,
-    TResult Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
+    TResult Function(AuthCheckRequested value)? authCheckRequested,
+    TResult Function(SignedOut value)? signedOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $AuthEventsCopyWith<$Res> {
-  factory $AuthEventsCopyWith(
-          AuthEvents value, $Res Function(AuthEvents) then) =
-      _$AuthEventsCopyWithImpl<$Res, AuthEvents>;
+abstract class $AuthEventCopyWith<$Res> {
+  factory $AuthEventCopyWith(AuthEvent value, $Res Function(AuthEvent) then) =
+      _$AuthEventCopyWithImpl<$Res, AuthEvent>;
 }
 
 /// @nodoc
-class _$AuthEventsCopyWithImpl<$Res, $Val extends AuthEvents>
-    implements $AuthEventsCopyWith<$Res> {
-  _$AuthEventsCopyWithImpl(this._value, this._then);
+class _$AuthEventCopyWithImpl<$Res, $Val extends AuthEvent>
+    implements $AuthEventCopyWith<$Res> {
+  _$AuthEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -83,35 +74,35 @@ class _$AuthEventsCopyWithImpl<$Res, $Val extends AuthEvents>
 }
 
 /// @nodoc
-abstract class _$$SignedOutAuthEventCopyWith<$Res> {
-  factory _$$SignedOutAuthEventCopyWith(_$SignedOutAuthEvent value,
-          $Res Function(_$SignedOutAuthEvent) then) =
-      __$$SignedOutAuthEventCopyWithImpl<$Res>;
+abstract class _$$AuthCheckRequestedCopyWith<$Res> {
+  factory _$$AuthCheckRequestedCopyWith(_$AuthCheckRequested value,
+          $Res Function(_$AuthCheckRequested) then) =
+      __$$AuthCheckRequestedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$SignedOutAuthEventCopyWithImpl<$Res>
-    extends _$AuthEventsCopyWithImpl<$Res, _$SignedOutAuthEvent>
-    implements _$$SignedOutAuthEventCopyWith<$Res> {
-  __$$SignedOutAuthEventCopyWithImpl(
-      _$SignedOutAuthEvent _value, $Res Function(_$SignedOutAuthEvent) _then)
+class __$$AuthCheckRequestedCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$AuthCheckRequested>
+    implements _$$AuthCheckRequestedCopyWith<$Res> {
+  __$$AuthCheckRequestedCopyWithImpl(
+      _$AuthCheckRequested _value, $Res Function(_$AuthCheckRequested) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$SignedOutAuthEvent implements SignedOutAuthEvent {
-  const _$SignedOutAuthEvent();
+class _$AuthCheckRequested implements AuthCheckRequested {
+  const _$AuthCheckRequested();
 
   @override
   String toString() {
-    return 'AuthEvents.signedOut()';
+    return 'AuthEvent.authCheckRequested()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SignedOutAuthEvent);
+        (other.runtimeType == runtimeType && other is _$AuthCheckRequested);
   }
 
   @override
@@ -120,122 +111,8 @@ class _$SignedOutAuthEvent implements SignedOutAuthEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signedOut,
     required TResult Function() authCheckRequested,
-    required TResult Function() initializeFirebase,
-  }) {
-    return signedOut();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signedOut,
-    TResult? Function()? authCheckRequested,
-    TResult? Function()? initializeFirebase,
-  }) {
-    return signedOut?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signedOut,
-    TResult Function()? authCheckRequested,
-    TResult Function()? initializeFirebase,
-    required TResult orElse(),
-  }) {
-    if (signedOut != null) {
-      return signedOut();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(SignedOutAuthEvent value) signedOut,
-    required TResult Function(AuthCheckRequestedAuthEvent value)
-        authCheckRequested,
-    required TResult Function(InitializeFirebaseAuthEvent value)
-        initializeFirebase,
-  }) {
-    return signedOut(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SignedOutAuthEvent value)? signedOut,
-    TResult? Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult? Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
-  }) {
-    return signedOut?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(SignedOutAuthEvent value)? signedOut,
-    TResult Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
-    required TResult orElse(),
-  }) {
-    if (signedOut != null) {
-      return signedOut(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class SignedOutAuthEvent implements AuthEvents {
-  const factory SignedOutAuthEvent() = _$SignedOutAuthEvent;
-}
-
-/// @nodoc
-abstract class _$$AuthCheckRequestedAuthEventCopyWith<$Res> {
-  factory _$$AuthCheckRequestedAuthEventCopyWith(
-          _$AuthCheckRequestedAuthEvent value,
-          $Res Function(_$AuthCheckRequestedAuthEvent) then) =
-      __$$AuthCheckRequestedAuthEventCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$AuthCheckRequestedAuthEventCopyWithImpl<$Res>
-    extends _$AuthEventsCopyWithImpl<$Res, _$AuthCheckRequestedAuthEvent>
-    implements _$$AuthCheckRequestedAuthEventCopyWith<$Res> {
-  __$$AuthCheckRequestedAuthEventCopyWithImpl(
-      _$AuthCheckRequestedAuthEvent _value,
-      $Res Function(_$AuthCheckRequestedAuthEvent) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
-  const _$AuthCheckRequestedAuthEvent();
-
-  @override
-  String toString() {
-    return 'AuthEvents.authCheckRequested()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthCheckRequestedAuthEvent);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
     required TResult Function() signedOut,
-    required TResult Function() authCheckRequested,
-    required TResult Function() initializeFirebase,
   }) {
     return authCheckRequested();
   }
@@ -243,9 +120,8 @@ class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signedOut,
     TResult? Function()? authCheckRequested,
-    TResult? Function()? initializeFirebase,
+    TResult? Function()? signedOut,
   }) {
     return authCheckRequested?.call();
   }
@@ -253,9 +129,8 @@ class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signedOut,
     TResult Function()? authCheckRequested,
-    TResult Function()? initializeFirebase,
+    TResult Function()? signedOut,
     required TResult orElse(),
   }) {
     if (authCheckRequested != null) {
@@ -267,11 +142,8 @@ class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(SignedOutAuthEvent value) signedOut,
-    required TResult Function(AuthCheckRequestedAuthEvent value)
-        authCheckRequested,
-    required TResult Function(InitializeFirebaseAuthEvent value)
-        initializeFirebase,
+    required TResult Function(AuthCheckRequested value) authCheckRequested,
+    required TResult Function(SignedOut value) signedOut,
   }) {
     return authCheckRequested(this);
   }
@@ -279,9 +151,8 @@ class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SignedOutAuthEvent value)? signedOut,
-    TResult? Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult? Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
+    TResult? Function(AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(SignedOut value)? signedOut,
   }) {
     return authCheckRequested?.call(this);
   }
@@ -289,9 +160,8 @@ class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(SignedOutAuthEvent value)? signedOut,
-    TResult Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
+    TResult Function(AuthCheckRequested value)? authCheckRequested,
+    TResult Function(SignedOut value)? signedOut,
     required TResult orElse(),
   }) {
     if (authCheckRequested != null) {
@@ -301,43 +171,40 @@ class _$AuthCheckRequestedAuthEvent implements AuthCheckRequestedAuthEvent {
   }
 }
 
-abstract class AuthCheckRequestedAuthEvent implements AuthEvents {
-  const factory AuthCheckRequestedAuthEvent() = _$AuthCheckRequestedAuthEvent;
+abstract class AuthCheckRequested implements AuthEvent {
+  const factory AuthCheckRequested() = _$AuthCheckRequested;
 }
 
 /// @nodoc
-abstract class _$$InitializeFirebaseAuthEventCopyWith<$Res> {
-  factory _$$InitializeFirebaseAuthEventCopyWith(
-          _$InitializeFirebaseAuthEvent value,
-          $Res Function(_$InitializeFirebaseAuthEvent) then) =
-      __$$InitializeFirebaseAuthEventCopyWithImpl<$Res>;
+abstract class _$$SignedOutCopyWith<$Res> {
+  factory _$$SignedOutCopyWith(
+          _$SignedOut value, $Res Function(_$SignedOut) then) =
+      __$$SignedOutCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitializeFirebaseAuthEventCopyWithImpl<$Res>
-    extends _$AuthEventsCopyWithImpl<$Res, _$InitializeFirebaseAuthEvent>
-    implements _$$InitializeFirebaseAuthEventCopyWith<$Res> {
-  __$$InitializeFirebaseAuthEventCopyWithImpl(
-      _$InitializeFirebaseAuthEvent _value,
-      $Res Function(_$InitializeFirebaseAuthEvent) _then)
+class __$$SignedOutCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$SignedOut>
+    implements _$$SignedOutCopyWith<$Res> {
+  __$$SignedOutCopyWithImpl(
+      _$SignedOut _value, $Res Function(_$SignedOut) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$InitializeFirebaseAuthEvent implements InitializeFirebaseAuthEvent {
-  const _$InitializeFirebaseAuthEvent();
+class _$SignedOut implements SignedOut {
+  const _$SignedOut();
 
   @override
   String toString() {
-    return 'AuthEvents.initializeFirebase()';
+    return 'AuthEvent.signedOut()';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$InitializeFirebaseAuthEvent);
+        (other.runtimeType == runtimeType && other is _$SignedOut);
   }
 
   @override
@@ -346,33 +213,30 @@ class _$InitializeFirebaseAuthEvent implements InitializeFirebaseAuthEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() signedOut,
     required TResult Function() authCheckRequested,
-    required TResult Function() initializeFirebase,
+    required TResult Function() signedOut,
   }) {
-    return initializeFirebase();
+    return signedOut();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? signedOut,
     TResult? Function()? authCheckRequested,
-    TResult? Function()? initializeFirebase,
+    TResult? Function()? signedOut,
   }) {
-    return initializeFirebase?.call();
+    return signedOut?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? signedOut,
     TResult Function()? authCheckRequested,
-    TResult Function()? initializeFirebase,
+    TResult Function()? signedOut,
     required TResult orElse(),
   }) {
-    if (initializeFirebase != null) {
-      return initializeFirebase();
+    if (signedOut != null) {
+      return signedOut();
     }
     return orElse();
   }
@@ -380,42 +244,37 @@ class _$InitializeFirebaseAuthEvent implements InitializeFirebaseAuthEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(SignedOutAuthEvent value) signedOut,
-    required TResult Function(AuthCheckRequestedAuthEvent value)
-        authCheckRequested,
-    required TResult Function(InitializeFirebaseAuthEvent value)
-        initializeFirebase,
+    required TResult Function(AuthCheckRequested value) authCheckRequested,
+    required TResult Function(SignedOut value) signedOut,
   }) {
-    return initializeFirebase(this);
+    return signedOut(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(SignedOutAuthEvent value)? signedOut,
-    TResult? Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult? Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
+    TResult? Function(AuthCheckRequested value)? authCheckRequested,
+    TResult? Function(SignedOut value)? signedOut,
   }) {
-    return initializeFirebase?.call(this);
+    return signedOut?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(SignedOutAuthEvent value)? signedOut,
-    TResult Function(AuthCheckRequestedAuthEvent value)? authCheckRequested,
-    TResult Function(InitializeFirebaseAuthEvent value)? initializeFirebase,
+    TResult Function(AuthCheckRequested value)? authCheckRequested,
+    TResult Function(SignedOut value)? signedOut,
     required TResult orElse(),
   }) {
-    if (initializeFirebase != null) {
-      return initializeFirebase(this);
+    if (signedOut != null) {
+      return signedOut(this);
     }
     return orElse();
   }
 }
 
-abstract class InitializeFirebaseAuthEvent implements AuthEvents {
-  const factory InitializeFirebaseAuthEvent() = _$InitializeFirebaseAuthEvent;
+abstract class SignedOut implements AuthEvent {
+  const factory SignedOut() = _$SignedOut;
 }
 
 /// @nodoc
@@ -445,22 +304,22 @@ mixin _$AuthState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(AuthenticatedAuthState value) authenticated,
-    required TResult Function(UnAuthenicatedAuthState value) unAuthenicated,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(UnAuthenicated value) unAuthenicated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(AuthenticatedAuthState value)? authenticated,
-    TResult? Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult? Function(Authenticated value)? authenticated,
+    TResult? Function(UnAuthenicated value)? unAuthenicated,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(AuthenticatedAuthState value)? authenticated,
-    TResult Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(UnAuthenicated value)? unAuthenicated,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -554,8 +413,8 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(AuthenticatedAuthState value) authenticated,
-    required TResult Function(UnAuthenicatedAuthState value) unAuthenicated,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(UnAuthenicated value) unAuthenicated,
   }) {
     return initial(this);
   }
@@ -564,8 +423,8 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(AuthenticatedAuthState value)? authenticated,
-    TResult? Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult? Function(Authenticated value)? authenticated,
+    TResult? Function(UnAuthenicated value)? unAuthenicated,
   }) {
     return initial?.call(this);
   }
@@ -574,8 +433,8 @@ class _$Initial implements Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(AuthenticatedAuthState value)? authenticated,
-    TResult Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(UnAuthenicated value)? unAuthenicated,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -590,25 +449,25 @@ abstract class Initial implements AuthState {
 }
 
 /// @nodoc
-abstract class _$$AuthenticatedAuthStateCopyWith<$Res> {
-  factory _$$AuthenticatedAuthStateCopyWith(_$AuthenticatedAuthState value,
-          $Res Function(_$AuthenticatedAuthState) then) =
-      __$$AuthenticatedAuthStateCopyWithImpl<$Res>;
+abstract class _$$AuthenticatedCopyWith<$Res> {
+  factory _$$AuthenticatedCopyWith(
+          _$Authenticated value, $Res Function(_$Authenticated) then) =
+      __$$AuthenticatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$AuthenticatedAuthStateCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$AuthenticatedAuthState>
-    implements _$$AuthenticatedAuthStateCopyWith<$Res> {
-  __$$AuthenticatedAuthStateCopyWithImpl(_$AuthenticatedAuthState _value,
-      $Res Function(_$AuthenticatedAuthState) _then)
+class __$$AuthenticatedCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$Authenticated>
+    implements _$$AuthenticatedCopyWith<$Res> {
+  __$$AuthenticatedCopyWithImpl(
+      _$Authenticated _value, $Res Function(_$Authenticated) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$AuthenticatedAuthState implements AuthenticatedAuthState {
-  const _$AuthenticatedAuthState();
+class _$Authenticated implements Authenticated {
+  const _$Authenticated();
 
   @override
   String toString() {
@@ -618,7 +477,7 @@ class _$AuthenticatedAuthState implements AuthenticatedAuthState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$AuthenticatedAuthState);
+        (other.runtimeType == runtimeType && other is _$Authenticated);
   }
 
   @override
@@ -662,8 +521,8 @@ class _$AuthenticatedAuthState implements AuthenticatedAuthState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(AuthenticatedAuthState value) authenticated,
-    required TResult Function(UnAuthenicatedAuthState value) unAuthenicated,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(UnAuthenicated value) unAuthenicated,
   }) {
     return authenticated(this);
   }
@@ -672,8 +531,8 @@ class _$AuthenticatedAuthState implements AuthenticatedAuthState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(AuthenticatedAuthState value)? authenticated,
-    TResult? Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult? Function(Authenticated value)? authenticated,
+    TResult? Function(UnAuthenicated value)? unAuthenicated,
   }) {
     return authenticated?.call(this);
   }
@@ -682,8 +541,8 @@ class _$AuthenticatedAuthState implements AuthenticatedAuthState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(AuthenticatedAuthState value)? authenticated,
-    TResult Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(UnAuthenicated value)? unAuthenicated,
     required TResult orElse(),
   }) {
     if (authenticated != null) {
@@ -693,30 +552,30 @@ class _$AuthenticatedAuthState implements AuthenticatedAuthState {
   }
 }
 
-abstract class AuthenticatedAuthState implements AuthState {
-  const factory AuthenticatedAuthState() = _$AuthenticatedAuthState;
+abstract class Authenticated implements AuthState {
+  const factory Authenticated() = _$Authenticated;
 }
 
 /// @nodoc
-abstract class _$$UnAuthenicatedAuthStateCopyWith<$Res> {
-  factory _$$UnAuthenicatedAuthStateCopyWith(_$UnAuthenicatedAuthState value,
-          $Res Function(_$UnAuthenicatedAuthState) then) =
-      __$$UnAuthenicatedAuthStateCopyWithImpl<$Res>;
+abstract class _$$UnAuthenicatedCopyWith<$Res> {
+  factory _$$UnAuthenicatedCopyWith(
+          _$UnAuthenicated value, $Res Function(_$UnAuthenicated) then) =
+      __$$UnAuthenicatedCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$UnAuthenicatedAuthStateCopyWithImpl<$Res>
-    extends _$AuthStateCopyWithImpl<$Res, _$UnAuthenicatedAuthState>
-    implements _$$UnAuthenicatedAuthStateCopyWith<$Res> {
-  __$$UnAuthenicatedAuthStateCopyWithImpl(_$UnAuthenicatedAuthState _value,
-      $Res Function(_$UnAuthenicatedAuthState) _then)
+class __$$UnAuthenicatedCopyWithImpl<$Res>
+    extends _$AuthStateCopyWithImpl<$Res, _$UnAuthenicated>
+    implements _$$UnAuthenicatedCopyWith<$Res> {
+  __$$UnAuthenicatedCopyWithImpl(
+      _$UnAuthenicated _value, $Res Function(_$UnAuthenicated) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$UnAuthenicatedAuthState implements UnAuthenicatedAuthState {
-  const _$UnAuthenicatedAuthState();
+class _$UnAuthenicated implements UnAuthenicated {
+  const _$UnAuthenicated();
 
   @override
   String toString() {
@@ -726,8 +585,7 @@ class _$UnAuthenicatedAuthState implements UnAuthenicatedAuthState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UnAuthenicatedAuthState);
+        (other.runtimeType == runtimeType && other is _$UnAuthenicated);
   }
 
   @override
@@ -771,8 +629,8 @@ class _$UnAuthenicatedAuthState implements UnAuthenicatedAuthState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(Initial value) initial,
-    required TResult Function(AuthenticatedAuthState value) authenticated,
-    required TResult Function(UnAuthenicatedAuthState value) unAuthenicated,
+    required TResult Function(Authenticated value) authenticated,
+    required TResult Function(UnAuthenicated value) unAuthenicated,
   }) {
     return unAuthenicated(this);
   }
@@ -781,8 +639,8 @@ class _$UnAuthenicatedAuthState implements UnAuthenicatedAuthState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(Initial value)? initial,
-    TResult? Function(AuthenticatedAuthState value)? authenticated,
-    TResult? Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult? Function(Authenticated value)? authenticated,
+    TResult? Function(UnAuthenicated value)? unAuthenicated,
   }) {
     return unAuthenicated?.call(this);
   }
@@ -791,8 +649,8 @@ class _$UnAuthenicatedAuthState implements UnAuthenicatedAuthState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(Initial value)? initial,
-    TResult Function(AuthenticatedAuthState value)? authenticated,
-    TResult Function(UnAuthenicatedAuthState value)? unAuthenicated,
+    TResult Function(Authenticated value)? authenticated,
+    TResult Function(UnAuthenicated value)? unAuthenicated,
     required TResult orElse(),
   }) {
     if (unAuthenicated != null) {
@@ -802,6 +660,6 @@ class _$UnAuthenicatedAuthState implements UnAuthenicatedAuthState {
   }
 }
 
-abstract class UnAuthenicatedAuthState implements AuthState {
-  const factory UnAuthenicatedAuthState() = _$UnAuthenicatedAuthState;
+abstract class UnAuthenicated implements AuthState {
+  const factory UnAuthenicated() = _$UnAuthenicated;
 }

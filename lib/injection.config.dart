@@ -14,16 +14,12 @@ import 'package:firebase_auth/firebase_auth.dart' as _i3;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i5;
 import 'package:injectable/injectable.dart' as _i2;
-import 'package:notes_trivia/features/notes_trivia/auth/bloc/auth/auth_bloc.dart'
-    as _i11;
-import 'package:notes_trivia/features/notes_trivia/auth/bloc/sign_in_form/sign_in_form_bloc.dart'
-    as _i10;
 import 'package:notes_trivia/features/notes_trivia/auth/domain/repository/auth_service.dart'
     as _i8;
 import 'package:notes_trivia/features/notes_trivia/auth/infrastructure/datasources/firebase_auth_provider.dart'
     as _i9;
 import 'package:notes_trivia/features/notes_trivia/core/firebase_injectable_module.dart'
-    as _i12;
+    as _i10;
 import 'package:notes_trivia/features/notes_trivia/notes/domain/repository/note_services.dart'
     as _i6;
 import 'package:notes_trivia/features/notes_trivia/notes/infrastructure/datasources/firestore_notes_provider.dart'
@@ -53,11 +49,8 @@ extension GetItInjectableX on _i1.GetIt {
           gh<_i3.FirebaseAuth>(),
           gh<_i5.GoogleSignIn>(),
         ));
-    gh.factory<_i10.SignInFormBloc>(
-        () => _i10.SignInFormBloc(gh<_i8.AuthService>()));
-    gh.factory<_i11.AuthBloc>(() => _i11.AuthBloc(gh<_i8.AuthService>()));
     return this;
   }
 }
 
-class _$FirebaseInjectableModule extends _i12.FirebaseInjectableModule {}
+class _$FirebaseInjectableModule extends _i10.FirebaseInjectableModule {}
