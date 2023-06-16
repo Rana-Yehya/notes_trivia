@@ -7,7 +7,7 @@ import 'core/themes/size_config.dart';
 import 'features/notes_trivia/auth/bloc/auth/auth_bloc.dart';
 import 'features/notes_trivia/auth/presentation/pages/sign_in_page.dart';
 import 'features/notes_trivia/core/app_routes.dart';
-import 'features/notes_trivia/notes/presentation/pages/notes_page.dart';
+import 'features/notes_trivia/notes/presentation/notes_overview/pages/notes_page.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {

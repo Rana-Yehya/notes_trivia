@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import '../../../../../core/themes/size_config.dart';
-import '../../domain/entities/failures/notes_failure.dart';
+import '../../../../../../core/themes/size_config.dart';
+import '../../../domain/entities/failures/notes_failure.dart';
 
 class FailedLoadedNotesWidget extends StatelessWidget {
   final NotesFailure failure;

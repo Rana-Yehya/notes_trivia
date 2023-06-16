@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/themes/size_config.dart';
-import '../../domain/entities/data/notes_entity.dart';
+import '../../../../../../core/themes/size_config.dart';
+import '../../../domain/entities/data/notes_entity.dart';
 
 class InvalidNoteWidget extends StatelessWidget {
   final NotesEntity note;

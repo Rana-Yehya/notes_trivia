@@ -5,8 +5,9 @@ import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_action/note_a
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_watcher/note_watcher_bloc.dart';
 import 'package:notes_trivia/injection.dart';
 
-import '../../../auth/bloc/auth/auth_bloc.dart';
-import '../../../core/app_routes.dart';
+import '../../../../auth/bloc/auth/auth_bloc.dart';
+import '../../../../core/app_routes.dart';
+import '../widgets/complete_or_uncomplete_switch_widget.dart';
 
 class NotesPage extends StatelessWidget {
   const NotesPage({super.key});
@@ -25,19 +26,19 @@ class NotesPage extends StatelessWidget {
       ],
       child: MultiBlocListener(
         listeners: [
-          /* Check on it (bloc listener of auth bloc is defined in home view)
-        BlocListener<AuthBloc,AuthState>(listener: (context, state)
-          
-        { state.maybeMap(
-          unAuthenicated: (_) =>Navigator.of(context).pushNamedAndRemoveUntil(
+          //Check on it (bloc listener of auth bloc is defined in home view)
+          BlocListener<AuthBloc, AuthState>(
+            listener: ((context, state) {
+              state.maybeMap(
+                unAuthenicated: (_) =>
+                    Navigator.of(context).pushNamedAndRemoveUntil(
                   signInPage,
                   (_) => false,
                 ),
                 orElse: () {},
-        );
-
-        */
-
+              );
+            }),
+          ),
           BlocListener<NoteActorBloc, NoteActorState>(
             listener: ((context, state) {
               state.maybeMap(
@@ -68,7 +69,7 @@ class NotesPage extends StatelessWidget {
               },
               icon: const Icon(Icons.exit_to_app),
             ),
-            actions: [/* Completed and uncompleted notes */],
+            actions: [CompleteOrUncompleteSwitchWidget()],
           ),
           body: Container(/*Bloc Provider for notes watcher*/),
           floatingActionButton: IconButton(
