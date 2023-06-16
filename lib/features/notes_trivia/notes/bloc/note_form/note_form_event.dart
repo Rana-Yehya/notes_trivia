@@ -11,7 +11,7 @@ class NoteFormEvent with _$NoteFormEvent {
       Initialized;
   const factory NoteFormEvent.noteHeaderChanged(String noteHeaderStr) =
       NoteHeaderChanged;
-  const factory NoteFormEvent.colorChanged(String colorStr) = ColorChanged;
+  const factory NoteFormEvent.colorChanged(Color colorStr) = ColorChanged;
   const factory NoteFormEvent.toDoItemsChanged(
       KtList<ToDoItemPrimitives> toDoItems) = ToDoItemsChanged;
   const factory NoteFormEvent.saveNoteButtonPressed() = SaveNoteButtonPressed;

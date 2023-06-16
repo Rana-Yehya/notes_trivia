@@ -1,14 +1,17 @@
 import 'package:another_flushbar/flushbar_helper.dart';
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_action/note_actor_bloc.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_watcher/note_watcher_bloc.dart';
+import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/notes_entity.dart';
 import 'package:notes_trivia/injection.dart';
-
+import 'notes_view.dart';
 import '../../../../auth/bloc/auth/auth_bloc.dart';
-import '../../../../core/app_routes.dart';
 import '../widgets/complete_or_uncomplete_switch_widget.dart';
+import '../../../../core/router/app_router.dart' hide NotesView; 
 
+@RoutePage()
 class NotesPage extends StatelessWidget {
   const NotesPage({super.key});
 
@@ -31,10 +34,7 @@ class NotesPage extends StatelessWidget {
             listener: ((context, state) {
               state.maybeMap(
                 unAuthenicated: (_) =>
-                    Navigator.of(context).pushNamedAndRemoveUntil(
-                  signInPage,
-                  (_) => false,
-                ),
+                    context.router.replace(const SignInRoute()),
                 orElse: () {},
               );
             }),
@@ -61,22 +61,18 @@ class NotesPage extends StatelessWidget {
             centerTitle: true,
             leading: IconButton(
               onPressed: () {
-                Navigator.of(context).pushNamedAndRemoveUntil(
-                  notesPage,
-                  (_) => false,
-                );
                 context.read<AuthBloc>().add(const AuthEvent.signedOut());
               },
               icon: const Icon(Icons.exit_to_app),
             ),
-            actions: [CompleteOrUncompleteSwitchWidget()],
+            actions: const [CompleteOrUncompleteSwitchWidget()],
           ),
-          body: Container(/*Bloc Provider for notes watcher*/),
+          body: const NotesView(),
           floatingActionButton: IconButton(
             onPressed: () {
-              /*
-          Navigate to create note
-          */
+              context.router.push(NoteFormRoute(
+                noteEntity: NotesEntity.empty(),
+              ));
             },
             icon: const Icon(Icons.add),
           ),

@@ -36,7 +36,7 @@ class NoteColor extends ValueObject<Color> {
   static const List<Color> noteColor = [
     Colors.white,
     Colors.cyan,
-    Colors.redAccent,
+    Colors.green,
     Colors.pinkAccent,
     Colors.tealAccent,
     Colors.blueAccent,

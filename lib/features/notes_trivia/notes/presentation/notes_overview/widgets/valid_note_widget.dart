@@ -7,6 +7,8 @@ import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_action/note_a
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/notes_entity.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/to_do_item_entity.dart';
 
+import '../../../../core/router/app_router.dart';
+
 class ValidNoteWidget extends StatelessWidget {
   final NotesEntity note;
 
@@ -19,7 +21,9 @@ class ValidNoteWidget extends StatelessWidget {
       color: note.noteColor.getOrCrash(),
       child: InkWell(
         onTap: () {
-          // Navigate to update page
+          context.router.push(NoteFormRoute(
+            noteEntity: note,
+          ));
         },
         onLongPress: () {
           final noteActorBloc = context.read<NoteActorBloc>();
@@ -68,7 +72,7 @@ class ValidNoteWidget extends StatelessWidget {
         context: context,
         builder: (context) {
           return AlertDialog(
-            title: Text('Do you want to delete this note?'),
+            title: const Text('Do you want to delete this note?'),
             content: Text(
               note.noteHeader.getOrCrash(),
               maxLines: 3,
@@ -79,7 +83,7 @@ class ValidNoteWidget extends StatelessWidget {
                 onPressed: () {
                   context.popRoute();
                 },
-                child: Text('Cancel'),
+                child: const Text('Cancel'),
               ),
               TextButton(
                 onPressed: () {
@@ -87,7 +91,7 @@ class ValidNoteWidget extends StatelessWidget {
                       .read<NoteActorBloc>()
                       .add(NoteActorEvent.deleted(note));
                 },
-                child: Text('Delete'),
+                child: const Text('Delete'),
               ),
             ],
           );

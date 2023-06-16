@@ -5,11 +5,10 @@ import 'package:notes_trivia/core/themes/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:notes_trivia/features/notes_trivia/auth/bloc/auth/auth_bloc.dart';
 
-import '../../../core/app_routes.dart';
+import '../../../core/router/app_router.dart';
 import '../../bloc/sign_in_form/sign_in_form_bloc.dart';
 import '../../domain/entities/failures/auth_failure.dart';
 
-@RoutePage()
 class SignInView extends StatefulWidget {
   const SignInView({super.key});
 
@@ -41,10 +40,7 @@ class _SignInViewState extends State<SignInView> {
                   .show(context);
             },
             (_) {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                notesPage,
-                (_) => false,
-              );
+              context.router.replace(const NotesRoute());
               context
                   .read<AuthBloc>()
                   .add(const AuthEvent.authCheckRequested());
@@ -83,7 +79,7 @@ class _SignInViewState extends State<SignInView> {
                 validator: (_) {
                   context.watch<SignInFormBloc>().state.email.value.fold(
                         (failure) => failure.maybeMap(
-                          auth: (value) => value.f.maybeMap(
+                          auth: (failedValue) => failedValue.f.maybeMap(
                             invaliedEmail: (_) => 'Invalied Email',
                             orElse: () => null,
                           ),

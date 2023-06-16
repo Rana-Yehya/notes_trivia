@@ -1,4 +1,3 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_watcher/note_watcher_bloc.dart';
@@ -7,7 +6,6 @@ import '../widgets/failed_loaded_notes_widget.dart';
 import '../widgets/invalid_note_widget.dart';
 import '../widgets/valid_note_widget.dart';
 
-@RoutePage()
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
 
@@ -23,9 +21,9 @@ class NotesView extends StatelessWidget {
           itemBuilder: (BuildContext context, int index) {
             final note = state.noteEntities[index];
             if (note.failureOption.isSome()) {
-              InvalidNoteWidget(note: note);
+              return InvalidNoteWidget(note: note);
             } else {
-              ValidNoteWidget(note: note);
+              return ValidNoteWidget(note: note);
             }
           },
           itemCount: state.noteEntities.size,

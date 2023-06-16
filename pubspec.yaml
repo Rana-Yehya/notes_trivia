@@ -55,6 +55,7 @@ dependencies:
   flutter_localization: ^0.1.12
   flutter_gen: ^5.3.1
   flutter_hooks: ^0.18.6
+  auto_route_generator: ^7.1.1
   
 dev_dependencies:
   flutter_test:

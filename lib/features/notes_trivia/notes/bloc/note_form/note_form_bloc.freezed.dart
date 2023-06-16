@@ -245,7 +245,7 @@ mixin _$NoteFormEvent {
   TResult when<TResult extends Object?>({
     required TResult Function(Option<NotesEntity> noteEntityInit) initialized,
     required TResult Function(String noteHeaderStr) noteHeaderChanged,
-    required TResult Function(String colorStr) colorChanged,
+    required TResult Function(Color colorStr) colorChanged,
     required TResult Function(KtList<ToDoItemPrimitives> toDoItems)
         toDoItemsChanged,
     required TResult Function() saveNoteButtonPressed,
@@ -255,7 +255,7 @@ mixin _$NoteFormEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult? Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult? Function(String colorStr)? colorChanged,
+    TResult? Function(Color colorStr)? colorChanged,
     TResult? Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult? Function()? saveNoteButtonPressed,
   }) =>
@@ -264,7 +264,7 @@ mixin _$NoteFormEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult Function(String colorStr)? colorChanged,
+    TResult Function(Color colorStr)? colorChanged,
     TResult Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult Function()? saveNoteButtonPressed,
     required TResult orElse(),
@@ -386,7 +386,7 @@ class _$Initialized implements Initialized {
   TResult when<TResult extends Object?>({
     required TResult Function(Option<NotesEntity> noteEntityInit) initialized,
     required TResult Function(String noteHeaderStr) noteHeaderChanged,
-    required TResult Function(String colorStr) colorChanged,
+    required TResult Function(Color colorStr) colorChanged,
     required TResult Function(KtList<ToDoItemPrimitives> toDoItems)
         toDoItemsChanged,
     required TResult Function() saveNoteButtonPressed,
@@ -399,7 +399,7 @@ class _$Initialized implements Initialized {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult? Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult? Function(String colorStr)? colorChanged,
+    TResult? Function(Color colorStr)? colorChanged,
     TResult? Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult? Function()? saveNoteButtonPressed,
   }) {
@@ -411,7 +411,7 @@ class _$Initialized implements Initialized {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult Function(String colorStr)? colorChanged,
+    TResult Function(Color colorStr)? colorChanged,
     TResult Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult Function()? saveNoteButtonPressed,
     required TResult orElse(),
@@ -541,7 +541,7 @@ class _$NoteHeaderChanged implements NoteHeaderChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(Option<NotesEntity> noteEntityInit) initialized,
     required TResult Function(String noteHeaderStr) noteHeaderChanged,
-    required TResult Function(String colorStr) colorChanged,
+    required TResult Function(Color colorStr) colorChanged,
     required TResult Function(KtList<ToDoItemPrimitives> toDoItems)
         toDoItemsChanged,
     required TResult Function() saveNoteButtonPressed,
@@ -554,7 +554,7 @@ class _$NoteHeaderChanged implements NoteHeaderChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult? Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult? Function(String colorStr)? colorChanged,
+    TResult? Function(Color colorStr)? colorChanged,
     TResult? Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult? Function()? saveNoteButtonPressed,
   }) {
@@ -566,7 +566,7 @@ class _$NoteHeaderChanged implements NoteHeaderChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult Function(String colorStr)? colorChanged,
+    TResult Function(Color colorStr)? colorChanged,
     TResult Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult Function()? saveNoteButtonPressed,
     required TResult orElse(),
@@ -635,7 +635,7 @@ abstract class _$$ColorChangedCopyWith<$Res> {
           _$ColorChanged value, $Res Function(_$ColorChanged) then) =
       __$$ColorChangedCopyWithImpl<$Res>;
   @useResult
-  $Res call({String colorStr});
+  $Res call({Color colorStr});
 }
 
 /// @nodoc
@@ -655,7 +655,7 @@ class __$$ColorChangedCopyWithImpl<$Res>
       null == colorStr
           ? _value.colorStr
           : colorStr // ignore: cast_nullable_to_non_nullable
-              as String,
+              as Color,
     ));
   }
 }
@@ -666,7 +666,7 @@ class _$ColorChanged implements ColorChanged {
   const _$ColorChanged(this.colorStr);
 
   @override
-  final String colorStr;
+  final Color colorStr;
 
   @override
   String toString() {
@@ -696,7 +696,7 @@ class _$ColorChanged implements ColorChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(Option<NotesEntity> noteEntityInit) initialized,
     required TResult Function(String noteHeaderStr) noteHeaderChanged,
-    required TResult Function(String colorStr) colorChanged,
+    required TResult Function(Color colorStr) colorChanged,
     required TResult Function(KtList<ToDoItemPrimitives> toDoItems)
         toDoItemsChanged,
     required TResult Function() saveNoteButtonPressed,
@@ -709,7 +709,7 @@ class _$ColorChanged implements ColorChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult? Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult? Function(String colorStr)? colorChanged,
+    TResult? Function(Color colorStr)? colorChanged,
     TResult? Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult? Function()? saveNoteButtonPressed,
   }) {
@@ -721,7 +721,7 @@ class _$ColorChanged implements ColorChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult Function(String colorStr)? colorChanged,
+    TResult Function(Color colorStr)? colorChanged,
     TResult Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult Function()? saveNoteButtonPressed,
     required TResult orElse(),
@@ -775,9 +775,9 @@ class _$ColorChanged implements ColorChanged {
 }
 
 abstract class ColorChanged implements NoteFormEvent {
-  const factory ColorChanged(final String colorStr) = _$ColorChanged;
+  const factory ColorChanged(final Color colorStr) = _$ColorChanged;
 
-  String get colorStr;
+  Color get colorStr;
   @JsonKey(ignore: true)
   _$$ColorChangedCopyWith<_$ColorChanged> get copyWith =>
       throw _privateConstructorUsedError;
@@ -850,7 +850,7 @@ class _$ToDoItemsChanged implements ToDoItemsChanged {
   TResult when<TResult extends Object?>({
     required TResult Function(Option<NotesEntity> noteEntityInit) initialized,
     required TResult Function(String noteHeaderStr) noteHeaderChanged,
-    required TResult Function(String colorStr) colorChanged,
+    required TResult Function(Color colorStr) colorChanged,
     required TResult Function(KtList<ToDoItemPrimitives> toDoItems)
         toDoItemsChanged,
     required TResult Function() saveNoteButtonPressed,
@@ -863,7 +863,7 @@ class _$ToDoItemsChanged implements ToDoItemsChanged {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult? Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult? Function(String colorStr)? colorChanged,
+    TResult? Function(Color colorStr)? colorChanged,
     TResult? Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult? Function()? saveNoteButtonPressed,
   }) {
@@ -875,7 +875,7 @@ class _$ToDoItemsChanged implements ToDoItemsChanged {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult Function(String colorStr)? colorChanged,
+    TResult Function(Color colorStr)? colorChanged,
     TResult Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult Function()? saveNoteButtonPressed,
     required TResult orElse(),
@@ -978,7 +978,7 @@ class _$SaveNoteButtonPressed implements SaveNoteButtonPressed {
   TResult when<TResult extends Object?>({
     required TResult Function(Option<NotesEntity> noteEntityInit) initialized,
     required TResult Function(String noteHeaderStr) noteHeaderChanged,
-    required TResult Function(String colorStr) colorChanged,
+    required TResult Function(Color colorStr) colorChanged,
     required TResult Function(KtList<ToDoItemPrimitives> toDoItems)
         toDoItemsChanged,
     required TResult Function() saveNoteButtonPressed,
@@ -991,7 +991,7 @@ class _$SaveNoteButtonPressed implements SaveNoteButtonPressed {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult? Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult? Function(String colorStr)? colorChanged,
+    TResult? Function(Color colorStr)? colorChanged,
     TResult? Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult? Function()? saveNoteButtonPressed,
   }) {
@@ -1003,7 +1003,7 @@ class _$SaveNoteButtonPressed implements SaveNoteButtonPressed {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<NotesEntity> noteEntityInit)? initialized,
     TResult Function(String noteHeaderStr)? noteHeaderChanged,
-    TResult Function(String colorStr)? colorChanged,
+    TResult Function(Color colorStr)? colorChanged,
     TResult Function(KtList<ToDoItemPrimitives> toDoItems)? toDoItemsChanged,
     TResult Function()? saveNoteButtonPressed,
     required TResult orElse(),

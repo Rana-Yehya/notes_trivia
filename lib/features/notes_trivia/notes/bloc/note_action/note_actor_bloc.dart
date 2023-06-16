@@ -1,4 +1,3 @@
-import 'package:injectable/injectable.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/failures/notes_failure.dart';
@@ -9,7 +8,7 @@ part 'note_actor_state.dart';
 
 part 'note_actor_bloc.freezed.dart';
 
-@Injectable
+//@Injectable
 class NoteActorBloc extends Bloc<NoteActorEvent, NoteActorState> {
   final NoteServices _noteServices;
   NoteActorBloc(this._noteServices) : super(NoteActorState.initial()) {

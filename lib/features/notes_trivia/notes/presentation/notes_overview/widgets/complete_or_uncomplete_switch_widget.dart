@@ -4,15 +4,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 import '../../../bloc/note_watcher/note_watcher_bloc.dart';
 
+class CompleteOrUncompleteSwitchWidget extends HookWidget {
+  const CompleteOrUncompleteSwitchWidget({super.key});
 
-class CompleteOrUncompleteSwitchWidget extends StatefulWidget {
-  @override
-  _CompleteOrUncompleteSwitchWidgetState createState() =>
-      _CompleteOrUncompleteSwitchWidgetState();
-}
-
-class _CompleteOrUncompleteSwitchWidgetState
-    extends State<CompleteOrUncompleteSwitchWidget> {
   @override
   Widget build(BuildContext context) {
     final toggleButtonState = useState(false);

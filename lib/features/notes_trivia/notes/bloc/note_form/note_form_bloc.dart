@@ -33,7 +33,8 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
         () => state,
         (noteEntityInit) => state.copyWith(
               note: noteEntityInit,
-              saveFailureOrSuccessOption: none(),
+              isEditing: true,
+              //saveFailureOrSuccessOption: none(),
             )));
   }
 
