@@ -3,11 +3,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_trivia/core/themes/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:notes_trivia/features/notes_trivia/auth/bloc/auth/auth_bloc.dart';
 
+import '../../../core/app_routes.dart';
 import '../../bloc/sign_in_form/sign_in_form_bloc.dart';
 import '../../domain/entities/failures/auth_failure.dart';
-
-
 
 @RoutePage()
 class SignInView extends StatefulWidget {
@@ -40,7 +40,15 @@ class _SignInViewState extends State<SignInView> {
                       duration: const Duration(seconds: 3))
                   .show(context);
             },
-            (_) => null,
+            (_) {
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                notesPage,
+                (_) => false,
+              );
+              context
+                  .read<AuthBloc>()
+                  .add(const AuthEvent.authCheckRequested());
+            },
           ),
         );
       },
@@ -74,12 +82,6 @@ class _SignInViewState extends State<SignInView> {
                 },
                 validator: (_) {
                   context.watch<SignInFormBloc>().state.email.value.fold(
-                        /*
-                        (value) => value.f.maybeMap(
-                          invaliedEmail: (_) => 'Invalied Email',
-                          orElse: () => null,
-                        ),
-                        */
                         (failure) => failure.maybeMap(
                           auth: (value) => value.f.maybeMap(
                             invaliedEmail: (_) => 'Invalied Email',

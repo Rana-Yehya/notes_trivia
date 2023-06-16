@@ -10,7 +10,7 @@ import 'features/notes_trivia/core/app_routes.dart';
 import 'features/notes_trivia/notes/presentation/pages/notes_page.dart';
 import 'firebase_options.dart';
 
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   configureInjection(Environment.prod);
@@ -46,6 +46,7 @@ class MainAppWidget extends StatelessWidget {
         ),
         home: const HomeView(),
         routes: {
+          homePage: (context) => const HomePage(),
           signInPage: (context) => const SignInPage(),
           notesPage: (context) => const NotesPage(),
         },
@@ -54,8 +55,8 @@ class MainAppWidget extends StatelessWidget {
   }
 }
 
-class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -77,10 +78,19 @@ class HomeView extends StatelessWidget {
           },
         );
       },
-      child: const Center(
-        child: CircularProgressIndicator(
-          backgroundColor: Colors.white,
-        ),
+      child: const HomeView(),
+    );
+  }
+}
+
+class HomeView extends StatelessWidget {
+  const HomeView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: CircularProgressIndicator(
+        backgroundColor: Colors.white,
       ),
     );
   }

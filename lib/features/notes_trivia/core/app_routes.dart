@@ -12,5 +12,6 @@ class AppRouter extends _$AppRouter {
    ]  ;  
  }     
  */
+const homePage ='/home/';
 const signInPage ='/signin/';
 const notesPage ='/notes/';

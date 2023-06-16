@@ -23,7 +23,8 @@ abstract class NotesEntity implements _$NotesEntity {
         toDoList: ToDoList(emptyList()),
       );
   const NotesEntity._();
-
+  // first option none => means value is correct
+  // second option false => means value is false
   Option<ValueFailure<dynamic>> get failureOption {
     return noteHeader.failureOrUnit
         .andThen(toDoList.failureOrUnit)

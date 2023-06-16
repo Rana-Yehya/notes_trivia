@@ -28,8 +28,6 @@ abstract class AuthService /*implements AuthProvider*/ {
       get currentUser; // => provider.getCurrentUser();
 
   Future<void> logOut(); // => provider.logOut();
-
-  Future<void> initialize();
   /*
   @override
   Future<void> logout() => provider.logout();
