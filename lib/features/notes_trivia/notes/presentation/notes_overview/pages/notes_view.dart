@@ -12,26 +12,30 @@ class NotesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NoteWatcherBloc, NoteWatcherState>(
-      builder: (context, state) => state.map(
-        initial: (_) => Container(),
-        loadInProgress: (_) => const Center(
-          child: CircularProgressIndicator(),
-        ),
-        loadSuccess: (state) => ListView.builder(
-          itemBuilder: (BuildContext context, int index) {
-            final note = state.noteEntities[index];
-            if (note.failureOption.isSome()) {
-              return InvalidNoteWidget(note: note);
-            } else {
-              return ValidNoteWidget(note: note);
-            }
+      builder: (context, state) {
+        return state.map(
+          initial: (_) => Container(),
+          loadInProgress: (_) => const Center(
+            child: CircularProgressIndicator(),
+          ),
+          loadSuccess: (state) {
+            return ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                final note = state.noteEntities[index];
+                if (note.failureOption.isSome()) {
+                  return InvalidNoteWidget(note: note);
+                } else {
+                  return ValidNoteWidget(note: note);
+                }
+              },
+              itemCount: state.noteEntities.size,
+            );
           },
-          itemCount: state.noteEntities.size,
-        ),
-        loadFailure: (state) => FailedLoadedNotesWidget(
-          failure: state.notesFailure,
-        ),
-      ),
+          loadFailure: (state) => FailedLoadedNotesWidget(
+            failure: state.notesFailure,
+          ),
+        );
+      },
     );
   }
 }

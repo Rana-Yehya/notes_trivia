@@ -13,9 +13,66 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   configureInjection(Environment.prod);
-  runApp(const MainAppWidget());
+  runApp(MainAppWidget());
+}
+/*
+class TextEditingControllerExampleApp extends StatelessWidget {
+  const TextEditingControllerExampleApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(home: Scaffold(
+      body: Container(
+        alignment: Alignment.center,
+        padding: const EdgeInsets.all(6),
+        child: TextEditingControllerExample(),
+      ),
+    ),
+    );
+  }
+}
+class TextEditingControllerExample extends StatefulWidget {
+  const TextEditingControllerExample({super.key});
+
+  @override
+  State<TextEditingControllerExample> createState() =>
+      _TextEditingControllerExampleState();
 }
 
+class _TextEditingControllerExampleState
+    extends State<TextEditingControllerExample> {
+  final TextEditingController _controller = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+    _controller.addListener(() {
+      final String text = _controller.text.toLowerCase();
+      _controller.value = _controller.value.copyWith(
+        text: text,
+        selection:
+            TextSelection(baseOffset: text.length, extentOffset: text.length),
+        composing: TextRange.empty,
+      );
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+          controller: _controller,
+          decoration: const InputDecoration(border: OutlineInputBorder()),
+        );
+  }
+}
+
+*/
 class MainAppWidget extends StatelessWidget {
   const MainAppWidget({super.key});
 
@@ -34,10 +91,11 @@ class MainAppWidget extends StatelessWidget {
       ],
       child: MaterialApp.router(
         routerConfig: _appRouter.config(),
-        routerDelegate: _appRouter.delegate(),
-        routeInformationParser: _appRouter.defaultRouteParser(),
+        //routerDelegate: _appRouter.delegate(),
+        //routeInformationParser: _appRouter.defaultRouteParser(),
         debugShowCheckedModeBanner: false,
         theme: themeApp,
+        
       ),
     );
   }

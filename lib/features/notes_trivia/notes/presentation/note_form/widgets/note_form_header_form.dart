@@ -5,7 +5,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import '../../../bloc/note_form/note_form_bloc.dart';
 import '../../../domain/entities/data/notes_data_classes.dart';
 
-class NoteFormBodyField extends StatelessWidget {
+
+class NoteFormBodyField extends HookWidget {
   const NoteFormBodyField({super.key});
 
   @override
@@ -51,27 +52,6 @@ class NoteFormBodyField extends StatelessWidget {
         ),
       ),
     );
+    
   }
 }
-
-/*
-class NoteFormBodyField extends StatefulWidget {
-  const NoteFormBodyField({super.key});
-
-  @override
-  State<NoteFormBodyField> createState() => _NoteFormBodyFieldState();
-}
-
-class _NoteFormBodyFieldState extends State<NoteFormBodyField> {
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 10,
-        horizontal: 5,
-      ),
-      child: TextFormField(),
-    );
-  }
-}
-*/

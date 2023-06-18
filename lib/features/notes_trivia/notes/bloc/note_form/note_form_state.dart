@@ -7,14 +7,14 @@ class NoteFormState with _$NoteFormState {
     required NotesEntity note,
     required bool isSaving,
     required bool isEditing,
-    required bool showErrorMsg,
+    required AutovalidateMode showErrorMsg,
     required Option<Either<NotesFailure, Unit>> saveFailureOrSuccessOption,
   }) = _NoteFormState;
   factory NoteFormState.initial() => NoteFormState(
         note: NotesEntity.empty(),
         isSaving: false,
         isEditing: false,
-        showErrorMsg: false,
+        showErrorMsg: AutovalidateMode.disabled,
         saveFailureOrSuccessOption: none(),
       );
 

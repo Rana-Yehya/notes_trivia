@@ -15,7 +15,7 @@ class InvalidNoteWidget extends StatelessWidget {
       child: Column(
         children: [
           const Text(
-            'Something worng with fetching the data',
+            'Something wrong with fetching the data',
             style: TextStyle(
               color: Colors.white,
               fontSize: 16,

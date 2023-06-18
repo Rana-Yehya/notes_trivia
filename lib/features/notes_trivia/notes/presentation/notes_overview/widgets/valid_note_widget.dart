@@ -47,11 +47,12 @@ class ValidNoteWidget extends StatelessWidget {
                   height: SizeConfig.height! * 0.01,
                 ),
                 Wrap(
+                  spacing: 8,
                   children: [
                     ...note.toDoList
                         .getOrCrash()
                         .map(
-                          (toDoItem) => Container() /*Text(toDoItem)*/,
+                          (toDoItem) => ToDoItemWidget(toDoElement: toDoItem),
                         )
                         .iter,
                   ],
@@ -69,33 +70,33 @@ class ValidNoteWidget extends StatelessWidget {
     required NoteActorBloc noteActorBloc,
   }) {
     showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: const Text('Do you want to delete this note?'),
-            content: Text(
-              note.noteHeader.getOrCrash(),
-              maxLines: 3,
-              overflow: TextOverflow.ellipsis,
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: const Text('Do you want to delete this note?'),
+          content: Text(
+            note.noteHeader.getOrCrash(),
+            maxLines: 3,
+            overflow: TextOverflow.ellipsis,
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                context.popRoute();
+              },
+              child: const Text('Cancel'),
             ),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  context.popRoute();
-                },
-                child: const Text('Cancel'),
-              ),
-              TextButton(
-                onPressed: () {
-                  context
-                      .read<NoteActorBloc>()
-                      .add(NoteActorEvent.deleted(note));
-                },
-                child: const Text('Delete'),
-              ),
-            ],
-          );
-        });
+            TextButton(
+              onPressed: () {
+                noteActorBloc.add(NoteActorEvent.deleted(note));
+                context.popRoute();
+              },
+              child: const Text('Delete'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
 
@@ -110,14 +111,14 @@ class ToDoItemWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         if (toDoElement.done) // check yes
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.check_box),
-          )
-        else
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.check_box_outline_blank),
+          Icon(
+            Icons.check_box,
+            color: Theme.of(context).colorScheme.secondary,
+          ),
+        if (!toDoElement.done)
+          Icon(
+            Icons.check_box_outline_blank,
+            color: Theme.of(context).disabledColor,
           ),
         Text(toDoElement.toDoItem.getOrCrash()),
       ],

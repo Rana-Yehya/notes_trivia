@@ -18,7 +18,7 @@ class FailedLoadedNotesWidget extends StatelessWidget {
         children: [
           Text(
             '😢',
-            style: TextStyle(fontSize: SizeConfig.size! * 0.5),
+            style: TextStyle(fontSize: SizeConfig.size! * 15),
           ),
           Text(
             failure.maybeMap(

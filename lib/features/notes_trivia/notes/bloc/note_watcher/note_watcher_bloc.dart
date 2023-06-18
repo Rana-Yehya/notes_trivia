@@ -13,10 +13,10 @@ part 'note_watcher_event.dart';
 part 'note_watcher_state.dart';
 part 'note_watcher_bloc.freezed.dart';
 
-//@Injectable
+@Injectable()
 class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
   final NoteServices _noteServices;
-  NoteWatcherBloc(this._noteServices) : super(NoteWatcherState.initial()) {
+  NoteWatcherBloc(this._noteServices) : super(const NoteWatcherState.initial()) {
     on<WatchAllStarted>((event, emit) => watchAllStarted(event, emit));
     on<WatchUncompletedStarted>(
         (event, emit) => watchUncompletedStarted(event, emit));
@@ -28,6 +28,7 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
 
   Future<void> watchAllStarted(
       WatchAllStarted event, Emitter<NoteWatcherState> emit) async {
+    print('IN WatchAllStarted');
     emit(const NoteWatcherState.loadInProgress());
     await _notesSubscription?.cancel();
     _notesSubscription = _noteServices.watchAll().listen(
@@ -36,14 +37,16 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
 
   Future<void> watchUncompletedStarted(
       WatchUncompletedStarted event, Emitter<NoteWatcherState> emit) async {
-    emit(NoteWatcherState.loadInProgress());
+    print('IN WatchUncompletedStarted');
+    emit(const NoteWatcherState.loadInProgress());
     await _notesSubscription?.cancel();
     _notesSubscription = _noteServices.watchUcompleted().listen(
         (failureOrNote) => add(NoteWatcherEvent.notesReceived(failureOrNote)));
   }
 
-  Future<void> notesReceived(
-      NotesReceived event, Emitter<NoteWatcherState> emit) async {
+  void notesReceived(
+      NotesReceived event, Emitter<NoteWatcherState> emit) {
+    print('IN NotesReceived');
     emit(event.failureOrNote.fold(
         (failure) => NoteWatcherState.loadFailure(failure),
         (notes) => NoteWatcherState.loadSuccess(notes)));

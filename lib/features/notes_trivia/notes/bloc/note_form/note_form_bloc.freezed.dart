@@ -19,7 +19,7 @@ mixin _$NoteFormState {
   NotesEntity get note => throw _privateConstructorUsedError;
   bool get isSaving => throw _privateConstructorUsedError;
   bool get isEditing => throw _privateConstructorUsedError;
-  bool get showErrorMsg => throw _privateConstructorUsedError;
+  AutovalidateMode get showErrorMsg => throw _privateConstructorUsedError;
   Option<Either<NotesFailure, Unit>> get saveFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
@@ -38,7 +38,7 @@ abstract class $NoteFormStateCopyWith<$Res> {
       {NotesEntity note,
       bool isSaving,
       bool isEditing,
-      bool showErrorMsg,
+      AutovalidateMode showErrorMsg,
       Option<Either<NotesFailure, Unit>> saveFailureOrSuccessOption});
 
   $NotesEntityCopyWith<$Res> get note;
@@ -79,7 +79,7 @@ class _$NoteFormStateCopyWithImpl<$Res, $Val extends NoteFormState>
       showErrorMsg: null == showErrorMsg
           ? _value.showErrorMsg
           : showErrorMsg // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as AutovalidateMode,
       saveFailureOrSuccessOption: null == saveFailureOrSuccessOption
           ? _value.saveFailureOrSuccessOption
           : saveFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -108,7 +108,7 @@ abstract class _$$_NoteFormStateCopyWith<$Res>
       {NotesEntity note,
       bool isSaving,
       bool isEditing,
-      bool showErrorMsg,
+      AutovalidateMode showErrorMsg,
       Option<Either<NotesFailure, Unit>> saveFailureOrSuccessOption});
 
   @override
@@ -148,7 +148,7 @@ class __$$_NoteFormStateCopyWithImpl<$Res>
       showErrorMsg: null == showErrorMsg
           ? _value.showErrorMsg
           : showErrorMsg // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as AutovalidateMode,
       saveFailureOrSuccessOption: null == saveFailureOrSuccessOption
           ? _value.saveFailureOrSuccessOption
           : saveFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -175,7 +175,7 @@ class _$_NoteFormState extends _NoteFormState {
   @override
   final bool isEditing;
   @override
-  final bool showErrorMsg;
+  final AutovalidateMode showErrorMsg;
   @override
   final Option<Either<NotesFailure, Unit>> saveFailureOrSuccessOption;
 
@@ -218,7 +218,7 @@ abstract class _NoteFormState extends NoteFormState {
       {required final NotesEntity note,
       required final bool isSaving,
       required final bool isEditing,
-      required final bool showErrorMsg,
+      required final AutovalidateMode showErrorMsg,
       required final Option<Either<NotesFailure, Unit>>
           saveFailureOrSuccessOption}) = _$_NoteFormState;
   const _NoteFormState._() : super._();
@@ -230,7 +230,7 @@ abstract class _NoteFormState extends NoteFormState {
   @override
   bool get isEditing;
   @override
-  bool get showErrorMsg;
+  AutovalidateMode get showErrorMsg;
   @override
   Option<Either<NotesFailure, Unit>> get saveFailureOrSuccessOption;
   @override

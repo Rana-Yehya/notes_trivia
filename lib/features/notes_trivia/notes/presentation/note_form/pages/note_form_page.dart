@@ -22,8 +22,9 @@ class NoteFormPage extends StatelessWidget {
       create: (context) => getIt<NoteFormBloc>()
         ..add(NoteFormEvent.initialized(optionOf(noteEntity))),
       child: BlocConsumer<NoteFormBloc, NoteFormState>(
-        listenWhen: (b, c) =>
-            b.saveFailureOrSuccessOption != c.saveFailureOrSuccessOption,
+        buildWhen: (p, c) => p.isSaving != c.isSaving,
+        listenWhen: (p, c) =>
+            p.saveFailureOrSuccessOption != c.saveFailureOrSuccessOption,
         listener: (context, state) {
           state.saveFailureOrSuccessOption.fold(() {}, (either) {
             either.fold((failure) {
@@ -34,18 +35,19 @@ class NoteFormPage extends StatelessWidget {
                     permissionDenied: (_) => 'Permission denied ❌',
                     noteNotFound: (_) => 'Note not found 😣'),
               ).show(context);
-            }, (note) {
+            }, (_) {
               context.router
                   .popUntil((route) => route.settings.name == NotesRoute.name);
             });
           });
         },
-        buildWhen: (b, c) => b.isSaving != c.isSaving,
         builder: (context, state) {
           return Stack(
             children: [
               const NoteFormView(),
-              NoteFormSaving(isSaving: state.isSaving,),
+              NoteFormSaving(
+                isSaving: state.isSaving,
+              ),
             ],
           );
         },

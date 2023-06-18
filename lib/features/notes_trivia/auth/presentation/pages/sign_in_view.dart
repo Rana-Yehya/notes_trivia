@@ -77,7 +77,7 @@ class _SignInViewState extends State<SignInView> {
                       ));
                 },
                 validator: (_) {
-                  context.watch<SignInFormBloc>().state.email.value.fold(
+                  return context.watch<SignInFormBloc>().state.email.value.fold(
                         (failure) => failure.maybeMap(
                           auth: (failedValue) => failedValue.f.maybeMap(
                             invaliedEmail: (_) => 'Invalied Email',
@@ -96,6 +96,7 @@ class _SignInViewState extends State<SignInView> {
                   border: OutlineInputBorder(),
                   icon: Icon(Icons.lock),
                   hintText: 'Enter Your Password',
+                  labelText: 'Password',
                 ),
                 autocorrect: false,
                 obscureText: true,
@@ -107,7 +108,7 @@ class _SignInViewState extends State<SignInView> {
                       ));
                 },
                 validator: (_) {
-                  context.watch<SignInFormBloc>().state.password.value.fold(
+                  return context.watch<SignInFormBloc>().state.password.value.fold(
                         /*
                         (value) => value.f.maybeMap(
                           shortPassword: (_) => 'Short Password',
@@ -116,7 +117,7 @@ class _SignInViewState extends State<SignInView> {
                         */
                         (failure) => failure.maybeMap(
                           auth: (value) => value.f.maybeMap(
-                            invaliedEmail: (_) => 'Invalied Email',
+                            shortPassword: (_) => 'Short Password',
                             orElse: () => null,
                           ),
                           orElse: () => null,

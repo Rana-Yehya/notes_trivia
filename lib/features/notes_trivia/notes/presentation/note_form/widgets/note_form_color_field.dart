@@ -11,17 +11,17 @@ class NoteFormColorField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NoteFormBloc, NoteFormState>(
-      buildWhen: (b, c) => b.note.noteColor != c.note.noteColor,
+      buildWhen: (p, c) => p.note.noteColor != c.note.noteColor,
       builder: (context, state) {
-        return Container(
+        return SizedBox(
           height: SizeConfig.height! * 0.1,
           child: ListView.separated(
-            padding: EdgeInsets.symmetric(horizontal: SizeConfig.width! * 0.01),
+            padding: EdgeInsets.symmetric(horizontal: SizeConfig.width! * 0.03),
             scrollDirection: Axis.horizontal,
             itemCount: NoteColor.noteColor.length,
             separatorBuilder: (BuildContext context, int index) {
               return SizedBox(
-                width: SizeConfig.width! * 0.02,
+                width: SizeConfig.width! * 0.05,
               );
             },
             physics: const BouncingScrollPhysics(),
@@ -44,9 +44,9 @@ class NoteFormColorField extends StatelessWidget {
                             ? BorderSide.none
                             : const BorderSide(width: 1.5)),
                   ),
-                  child: Container(
-                    width: SizeConfig.width! * 0.01,
-                    height: SizeConfig.height! * 0.01,
+                  child: SizedBox(
+                    width: SizeConfig.width! * 0.15,
+                    height: SizeConfig.height! * 0.15,
                   ),
                 ),
               );

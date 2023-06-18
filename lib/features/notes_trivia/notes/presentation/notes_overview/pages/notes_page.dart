@@ -9,7 +9,7 @@ import 'package:notes_trivia/injection.dart';
 import 'notes_view.dart';
 import '../../../../auth/bloc/auth/auth_bloc.dart';
 import '../widgets/complete_or_uncomplete_switch_widget.dart';
-import '../../../../core/router/app_router.dart' hide NotesView; 
+import '../../../../core/router/app_router.dart';
 
 @RoutePage()
 class NotesPage extends StatelessWidget {

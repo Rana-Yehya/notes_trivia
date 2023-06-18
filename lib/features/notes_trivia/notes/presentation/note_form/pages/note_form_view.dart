@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../../../core/themes/size_config.dart';
 import '../../../bloc/note_form/note_form_bloc.dart';
 import '../widgets/note_form_color_field.dart';
 import '../widgets/note_form_header_form.dart';
-
 
 class NoteFormView extends StatefulWidget {
   const NoteFormView({super.key});
@@ -19,7 +19,7 @@ class _NoteFormViewState extends State<NoteFormView> {
     return Scaffold(
       appBar: AppBar(
         title: BlocBuilder<NoteFormBloc, NoteFormState>(
-          buildWhen: (b, c) => b.isEditing != c.isEditing,
+          buildWhen: (p, c) => p.isEditing != c.isEditing,
           builder: (context, state) {
             return Text(state.isEditing ? 'Edit A Note' : 'Create A Note');
           },
@@ -36,16 +36,20 @@ class _NoteFormViewState extends State<NoteFormView> {
         ],
       ),
       body: BlocBuilder<NoteFormBloc, NoteFormState>(
-        buildWhen: (b, c) => b.showErrorMsg != c.showErrorMsg,
+        buildWhen: (p, c) => p.showErrorMsg != c.showErrorMsg,
         builder: (context, state) {
-          return const Form(
-            autovalidateMode: AutovalidateMode.onUserInteraction,
+          return Form(
+            autovalidateMode: state.showErrorMsg,
             child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  NoteFormBodyField(),
-                  NoteFormColorField(),
-                ],
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    //NoteFormBodyField(),
+                    NoteFormBodyField(),
+                    SizedBox(height: SizeConfig.height! * 0.05),
+                    NoteFormColorField(),
+                  ],
+                ),
               ),
             ),
           );

@@ -17,6 +17,4 @@ class UniqueId extends ValueObject<String> {
   }
 
   const UniqueId._({required this.value});
-
-  //static fromUniqueString(Function<A>(a) id) {}
 }
