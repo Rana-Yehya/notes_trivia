@@ -1,9 +1,15 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:kt_dart/kt.dart';
 
 import '../../../../core/entity/unique_id.dart';
 import '../../../domain/entities/data/notes_data_classes.dart';
 import '../../../domain/entities/data/to_do_item_entity.dart';
 part 'to_do_item_primitives.freezed.dart';
+
+class FormToDos extends ValueNotifier<KtList<ToDoItemPrimitives>> {
+  FormToDos() : super(emptyList<ToDoItemPrimitives>());
+}
 
 @freezed
 abstract class ToDoItemPrimitives implements _$ToDoItemPrimitives {
@@ -32,5 +38,4 @@ abstract class ToDoItemPrimitives implements _$ToDoItemPrimitives {
         toDoItem: ToDoItem(toDoItem),
         done: done,
       );
-
 }

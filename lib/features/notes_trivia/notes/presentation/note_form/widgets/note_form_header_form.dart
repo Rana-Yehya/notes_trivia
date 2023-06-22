@@ -13,10 +13,10 @@ class NoteFormBodyField extends HookWidget {
   Widget build(BuildContext context) {
     final textEditingController = useTextEditingController();
     /*
-		The bloc listener is for editing the note
-		when editing the note, the last text written in the note will be put in textEditingController
-		Question: where is isEditing value ggetting changed?  
-		in init event in the note form bloc
+      The bloc listener is for editing the note
+      when editing the note, the last text written in the note will be put in textEditingController
+      Question: where is isEditing value ggetting changed?  
+      in init event in the note form bloc
     */
     return BlocListener<NoteFormBloc, NoteFormState>(
       listener: (context, state) {

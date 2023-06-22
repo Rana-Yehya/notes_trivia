@@ -15,5 +15,5 @@ extension FirebaseFirestoreX on FirebaseFirestore {
 }
 
 extension DocumentReferenceX on DocumentReference {
-  CollectionReference get userCollection => collection('users');
+  CollectionReference get userCollection => collection('notes');
 }

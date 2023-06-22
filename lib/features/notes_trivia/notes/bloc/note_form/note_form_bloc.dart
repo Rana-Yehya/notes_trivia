@@ -75,16 +75,19 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
       isSaving: true,
       saveFailureOrSuccessOption: none(),
     ));
+    
     if (state.note.failureOption.isNone()) {
       failureOrSaved = state.isEditing
           ? await _noteServices.updateNote(state.note)
           : await _noteServices.addNote(state.note);
     }
+    await Future.delayed(const Duration(seconds: 2), (){});
     emit(state.copyWith(
       isSaving: false,
       showErrorMsg: AutovalidateMode.onUserInteraction,
       saveFailureOrSuccessOption: optionOf(failureOrSaved),
     ));
+    
   }
 }
 

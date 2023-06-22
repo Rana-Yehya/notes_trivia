@@ -28,7 +28,6 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
 
   Future<void> watchAllStarted(
       WatchAllStarted event, Emitter<NoteWatcherState> emit) async {
-    print('IN WatchAllStarted');
     emit(const NoteWatcherState.loadInProgress());
     await _notesSubscription?.cancel();
     _notesSubscription = _noteServices.watchAll().listen(
@@ -37,7 +36,6 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
 
   Future<void> watchUncompletedStarted(
       WatchUncompletedStarted event, Emitter<NoteWatcherState> emit) async {
-    print('IN WatchUncompletedStarted');
     emit(const NoteWatcherState.loadInProgress());
     await _notesSubscription?.cancel();
     _notesSubscription = _noteServices.watchUcompleted().listen(
@@ -46,7 +44,6 @@ class NoteWatcherBloc extends Bloc<NoteWatcherEvent, NoteWatcherState> {
 
   void notesReceived(
       NotesReceived event, Emitter<NoteWatcherState> emit) {
-    print('IN NotesReceived');
     emit(event.failureOrNote.fold(
         (failure) => NoteWatcherState.loadFailure(failure),
         (notes) => NoteWatcherState.loadSuccess(notes)));
