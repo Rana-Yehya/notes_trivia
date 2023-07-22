@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:kt_dart/collection.dart';
 
-import '../../../../core/failures/value_failure.dart';
+import '../../../../../../core/failures/value_failure.dart';
 import '../failures/notes_value_failure.dart';
 
 Either<ValueFailure<String>, String> validateExceedingLength(
@@ -27,7 +27,7 @@ Either<ValueFailure<String>, String> validateEmpty(String value) {
 
 Either<ValueFailure<KtList<T>>, KtList<T>> validateListTooLong<T>(
     KtList<T> value, int maxElementsInlist) {
-  if (value.size < maxElementsInlist) {
+  if (value.size <= maxElementsInlist) {
     return Right(value);
   } else {
     return Left(ValueFailure.notes(NotesValueFailure.listTooLong(

@@ -29,16 +29,15 @@ class NoteFormBloc extends Bloc<NoteFormEvent, NoteFormState> {
   void initialized(
       Initialized event, Emitter<NoteFormState> emit) {
     emit(event.noteEntityInit.fold(() => state, (noteEntity) {
-      if (noteEntity.toDoList.length == 0) {
-        return state;
-      } else {
+      
+        
         return state.copyWith(
           note: noteEntity,
           isEditing: true,
           //saveFailureOrSuccessOption: none(),
         );
       }
-    }));
+    ));
   }
 
   void noteHeaderChanged(

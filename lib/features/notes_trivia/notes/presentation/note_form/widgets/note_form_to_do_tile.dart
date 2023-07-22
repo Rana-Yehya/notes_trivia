@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kt_dart/kt.dart';
-import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_form/note_form_primitives/form_to_do_helper.dart';
+
+import 'package:provider/provider.dart';
 
 import '../../../bloc/note_form/note_form_bloc.dart';
 import '../../../bloc/note_form/note_form_primitives/to_do_item_primitives.dart';
@@ -14,7 +15,7 @@ class NoteFormToDoTile extends StatelessWidget {
     return BlocConsumer<NoteFormBloc, NoteFormState>(
       listenWhen: (p, c) => p.isEditing != c.isEditing,
       listener: ((context, state) {
-        context.formToDos = state.note.toDoList.value.fold(
+        Provider.of<FormToDos>(context, listen: false).value = state.note.toDoList.value.fold(
             (f) => listOf<ToDoItemPrimitives>(),
             (toDoItem) =>
                 toDoItem.map((_) => ToDoItemPrimitives.fromDomain(_)));
@@ -29,11 +30,13 @@ class NoteFormToDoTile extends StatelessWidget {
             child: Icon(Icons.add),
           ),
           onTap: () {
-            context.formToDos =
-                context.formToDos.plusElement(ToDoItemPrimitives.empty());
+
+
+            Provider.of<FormToDos>(context, listen: false).value =
+                Provider.of<FormToDos>(context, listen: false).value.plusElement(ToDoItemPrimitives.empty());
             context
                 .read<NoteFormBloc>()
-                .add(NoteFormEvent.toDoItemsChanged(context.formToDos));
+                .add(NoteFormEvent.toDoItemsChanged(Provider.of<FormToDos>(context, listen: false).value));
           },
         );
       }),

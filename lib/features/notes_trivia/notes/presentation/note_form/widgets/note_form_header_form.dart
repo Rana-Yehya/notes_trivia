@@ -5,7 +5,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import '../../../bloc/note_form/note_form_bloc.dart';
 import '../../../domain/entities/data/notes_data_classes.dart';
 
-
 class NoteFormBodyField extends HookWidget {
   const NoteFormBodyField({super.key});
 
@@ -22,7 +21,7 @@ class NoteFormBodyField extends HookWidget {
       listener: (context, state) {
         textEditingController.text = state.note.noteHeader.getOrCrash();
       },
-      listenWhen: (b, c) => b.isEditing != c.isEditing,
+      listenWhen: (p, c) => p.isEditing != c.isEditing,
       child: Padding(
         padding: const EdgeInsets.symmetric(
           vertical: 10,
@@ -39,19 +38,26 @@ class NoteFormBodyField extends HookWidget {
           onChanged: (value) => context
               .read<NoteFormBloc>()
               .add(NoteFormEvent.noteHeaderChanged(value)),
-          validator: (_) =>
-              context.watch<NoteFormBloc>().state.note.noteHeader.value.fold(
-                    (failure) => failure.maybeMap(
-                        notes: (failedValue) => failedValue.f.maybeMap(
-                            empty: (_) => 'Note is empty',
-                            exceedingLength: (_) => 'Note exceeding max length',
-                            orElse: () => null),
+          validator: (_) {
+            return context
+                .read<NoteFormBloc>()
+                .state
+                .note
+                .noteHeader
+                .value
+                .fold(
+                  (failure) => failure.maybeMap(
+                    notes: (failedValue) => failedValue.f.maybeMap(
+                        empty: (_) => 'Note is empty',
+                        exceedingLength: (_) => 'Note exceeding max length',
                         orElse: () => null),
-                    (note) => null,
+                    orElse: () => null,
                   ),
+                  (note) => null,
+                );
+          },
         ),
       ),
     );
-    
   }
 }

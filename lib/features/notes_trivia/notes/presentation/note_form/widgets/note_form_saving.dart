@@ -13,7 +13,6 @@ class NoteFormSaving extends StatelessWidget {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 10),
         color: isSaving ? Colors.black.withOpacity(0.5) : Colors.transparent,
-        //color: Colors.black,
         height: SizeConfig.height!,
         width: SizeConfig.width!,
         child: Visibility(

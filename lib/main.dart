@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:notes_trivia/injection.dart';
+import 'core/router/app_router.dart';
 import 'core/themes/app_themes.dart';
 import 'core/themes/size_config.dart';
 import 'features/notes_trivia/auth/bloc/auth/auth_bloc.dart';
-import 'features/notes_trivia/core/router/app_router.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -15,14 +15,15 @@ Future<void> main() async {
   configureInjection(Environment.prod);
   runApp(MainAppWidget());
 }
-class MainAppWidget extends StatelessWidget {
-  const MainAppWidget({super.key});
 
+class MainAppWidget extends StatelessWidget {
+  MainAppWidget({super.key});
+  final _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     debugDumpRenderTree();
-    final _appRouter = AppRouter();
+
     return MultiBlocProvider(
       providers: [
         BlocProvider(
@@ -34,11 +35,8 @@ class MainAppWidget extends StatelessWidget {
       ],
       child: MaterialApp.router(
         routerConfig: _appRouter.config(),
-        //routerDelegate: _appRouter.delegate(),
-        //routeInformationParser: _appRouter.defaultRouteParser(),
         debugShowCheckedModeBanner: false,
         theme: themeApp,
-        
       ),
     );
   }

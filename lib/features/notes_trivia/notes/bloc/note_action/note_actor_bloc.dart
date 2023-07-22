@@ -13,7 +13,7 @@ part 'note_actor_bloc.freezed.dart';
 @Injectable()
 class NoteActorBloc extends Bloc<NoteActorEvent, NoteActorState> {
   final NoteServices _noteServices;
-  NoteActorBloc(this._noteServices) : super(NoteActorState.initial()) {
+  NoteActorBloc(this._noteServices) : super(const NoteActorState.initial()) {
     on<Deleted>((event, emit) => deleted(event, emit));
   }
 

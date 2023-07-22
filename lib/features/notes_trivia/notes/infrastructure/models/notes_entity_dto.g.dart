@@ -21,7 +21,7 @@ Map<String, dynamic> _$$_NotesEntityDTOToJson(_$_NotesEntityDTO instance) =>
     <String, dynamic>{
       'noteHeader': instance.noteHeader,
       'noteColor': instance.noteColor,
-      'toDoList': instance.toDoList,
+      'toDoList': instance.toDoList.map((e) => e.toJson()).toList(),
       'serverTime':
           const ServerTimestampConverter().toJson(instance.serverTime),
     };

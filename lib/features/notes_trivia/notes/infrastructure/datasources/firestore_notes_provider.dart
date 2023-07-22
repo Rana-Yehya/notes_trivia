@@ -113,6 +113,8 @@ class FirestoreNotesProvider extends NoteServices {
                   .toImmutableList(),
             ))
         .onErrorReturnWith((e, _) {
+                print("e.message");
+      print(e);
       if (e is FirebaseException && e.message!.contains('PERMISSION_DENIED')) {
         return left(const NotesFailure.permissionDenied());
       } else {

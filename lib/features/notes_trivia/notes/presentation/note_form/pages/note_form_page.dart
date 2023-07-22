@@ -7,8 +7,8 @@ import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_form/note_for
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/notes_entity.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/presentation/note_form/widgets/note_form_saving.dart';
 
+import '../../../../../../core/router/app_router.dart';
 import '../../../../../../injection.dart';
-import '../../../../core/router/app_router.dart';
 import 'note_form_view.dart';
 
 @RoutePage()
@@ -23,8 +23,14 @@ class NoteFormPage extends StatelessWidget {
         ..add(NoteFormEvent.initialized(optionOf(noteEntity))),
       child: BlocConsumer<NoteFormBloc, NoteFormState>(
         buildWhen: (p, c) => p.isSaving != c.isSaving,
-        listenWhen: (p, c) =>
-            p.saveFailureOrSuccessOption != c.saveFailureOrSuccessOption,
+        listenWhen: (p, c) {
+          print("p");
+          print(p);
+          print("c");
+          print(c);
+          return p.saveFailureOrSuccessOption != c.saveFailureOrSuccessOption;
+        },
+            
         listener: (context, state) {
           state.saveFailureOrSuccessOption.fold(() {}, (either) {
             either.fold((failure) {

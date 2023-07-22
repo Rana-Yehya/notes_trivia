@@ -7,7 +7,7 @@ import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_action/note_a
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/notes_entity.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/to_do_item_entity.dart';
 
-import '../../../../core/router/app_router.dart';
+import '../../../../../../core/router/app_router.dart';
 
 class ValidNoteWidget extends StatelessWidget {
   final NotesEntity note;

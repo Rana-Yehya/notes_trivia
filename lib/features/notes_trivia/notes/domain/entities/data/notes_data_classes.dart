@@ -1,9 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:kt_dart/collection.dart';
-
-import 'package:notes_trivia/features/notes_trivia/core/failures/value_failure.dart';
-import '../../../../core/entity/value_object.dart';
+import '../../../../../../core/entity/value_object.dart';
+import '../../../../../../core/failures/value_failure.dart';
 import 'notes_data_validators.dart';
 
 class NoteHeader extends ValueObject<String> {
@@ -22,7 +21,7 @@ class NoteHeader extends ValueObject<String> {
 class ToDoItem extends ValueObject<String> {
   @override
   final Either<ValueFailure<String>, String> value;
-  static const maxExceedingLength = 1000;
+  static const maxExceedingLength = 30;
   factory ToDoItem(String input) {
     return ToDoItem._(
         value: validateExceedingLength(input, maxExceedingLength)
@@ -43,7 +42,6 @@ class NoteColor extends ValueObject<Color> {
     Colors.brown
   ];
   @override
-  // TODO: implement value
   final Either<ValueFailure<Color>, Color> value;
   factory NoteColor(Color input) {
     return NoteColor._(value: right(input));

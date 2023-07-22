@@ -1,8 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/entity/value_object.dart';
-import '../../../../core/failures/value_failure.dart';
+
+import '../../../../../../core/entity/value_object.dart';
+import '../../../../../../core/failures/value_failure.dart';
 import 'user_data_validators.dart';
 
 

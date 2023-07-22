@@ -1,8 +1,9 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
-import '../../auth/domain/entities/failures/auth_value_failure.dart';
-import '../../notes/domain/entities/failures/notes_value_failure.dart';
+import '../../features/notes_trivia/auth/domain/entities/failures/auth_value_failure.dart';
+import '../../features/notes_trivia/notes/domain/entities/failures/notes_value_failure.dart';
+
 part 'value_failure.freezed.dart';
 
 @freezed

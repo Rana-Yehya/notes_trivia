@@ -1,4 +1,4 @@
-target:
+targets:
   $default:
     builders:
       json_serializable:

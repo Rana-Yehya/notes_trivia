@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../core/entity/unique_id.dart';
+import '../../../../../core/entity/unique_id.dart';
 import '../../domain/entities/data/notes_data_classes.dart';
 import '../../domain/entities/data/to_do_item_entity.dart';
 

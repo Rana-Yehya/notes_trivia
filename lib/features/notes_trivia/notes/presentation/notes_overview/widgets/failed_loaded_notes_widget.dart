@@ -9,7 +9,7 @@ class FailedLoadedNotesWidget extends StatelessWidget {
   final NotesFailure failure;
 
   const FailedLoadedNotesWidget({required this.failure, super.key});
-
+  
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -27,6 +27,7 @@ class FailedLoadedNotesWidget extends StatelessWidget {
             style: const TextStyle(fontSize: 24),
             textAlign: TextAlign.center,
           ),
+          
           const Text('Please contact support'),
           InkWell(
             onTap: () {

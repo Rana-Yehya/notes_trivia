@@ -1,0 +1,12 @@
+{
+                    "window.zoomLevel": 0,
+                    "editor.fontSize": 20,
+                    "scm.inputFontSize": 20,
+                    "debug.console.fontSize": 20,
+                    "terminal.integrated.fontSize": 18,
+                    "chat.editor.fontSize": 16,
+                    "markdown.preview.fontSize": 16,
+                    "editor.accessibilityPageSize": 16,
+                    "editor.codeLensFontSize": 16,
+                    "editor.fastScrollSensitivity": 2
+}

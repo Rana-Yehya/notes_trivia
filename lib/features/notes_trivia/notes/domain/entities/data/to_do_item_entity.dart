@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../core/entity/unique_id.dart';
-import '../../../../core/failures/value_failure.dart';
+import '../../../../../../core/entity/unique_id.dart';
+import '../../../../../../core/failures/value_failure.dart';
 import 'notes_data_classes.dart';
 part 'to_do_item_entity.freezed.dart';
 

@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
 
-import '../../../../core/failures/value_failure.dart';
+
+import '../../../../../../core/failures/value_failure.dart';
 import '../failures/auth_value_failure.dart';
 
 Either<ValueFailure<String>, String> validatePassword(String password) {

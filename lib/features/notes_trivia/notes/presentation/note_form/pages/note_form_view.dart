@@ -18,6 +18,7 @@ class NoteFormView extends StatefulWidget {
 }
 
 class _NoteFormViewState extends State<NoteFormView> {
+  final GlobalKey<FormState> _noteFormKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,20 +41,25 @@ class _NoteFormViewState extends State<NoteFormView> {
         ],
       ),
       body: BlocBuilder<NoteFormBloc, NoteFormState>(
-        buildWhen: (p, c) => p.showErrorMsg != c.showErrorMsg,
+        //buildWhen: (p, c) => p.showErrorMsg != c.showErrorMsg,
         builder: (context, state) {
           return ChangeNotifierProvider(
-          create: (_) => FormToDos(),
-          child: Form(
-            autovalidateMode: state.showErrorMsg,
-            child: SingleChildScrollView(
+            create: (_) => FormToDos(),
+            child: Form(
+              key: _noteFormKey,
+              autovalidateMode: AutovalidateMode.onUserInteraction,
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     const NoteFormBodyField(),
                     SizedBox(height: SizeConfig.height! * 0.001),
+                    
                     const NoteFormColorField(),
-                    const NoteFormToDoTile(),
+                    
                     const NoteFormToDoList(),
+                    
+                    const NoteFormToDoTile(),
+                    
                   ],
                 ),
               ),

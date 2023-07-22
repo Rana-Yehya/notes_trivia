@@ -488,26 +488,26 @@ mixin _$NoteWatcherState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(LoadSuccess value) loadSuccess,
-    required TResult Function(LoadFailure value) loadFailure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(LoadSuccess value)? loadSuccess,
-    TResult? Function(LoadFailure value)? loadFailure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(LoadSuccess value)? loadSuccess,
-    TResult Function(LoadFailure value)? loadFailure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -532,23 +532,24 @@ class _$NoteWatcherStateCopyWithImpl<$Res, $Val extends NoteWatcherState>
 }
 
 /// @nodoc
-abstract class _$$InitialCopyWith<$Res> {
-  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
-      __$$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialCopyWithImpl<$Res>
-    extends _$NoteWatcherStateCopyWithImpl<$Res, _$Initial>
-    implements _$$InitialCopyWith<$Res> {
-  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$NoteWatcherStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Initial implements Initial {
-  const _$Initial();
+class _$_Initial implements _Initial {
+  const _$_Initial();
 
   @override
   String toString() {
@@ -558,7 +559,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Initial);
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -604,10 +605,10 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(LoadSuccess value) loadSuccess,
-    required TResult Function(LoadFailure value) loadFailure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
     return initial(this);
   }
@@ -615,10 +616,10 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(LoadSuccess value)? loadSuccess,
-    TResult? Function(LoadFailure value)? loadFailure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
   }) {
     return initial?.call(this);
   }
@@ -626,10 +627,10 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(LoadSuccess value)? loadSuccess,
-    TResult Function(LoadFailure value)? loadFailure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -639,30 +640,30 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements NoteWatcherState {
-  const factory Initial() = _$Initial;
+abstract class _Initial implements NoteWatcherState {
+  const factory _Initial() = _$_Initial;
 }
 
 /// @nodoc
-abstract class _$$LoadInProgressCopyWith<$Res> {
-  factory _$$LoadInProgressCopyWith(
-          _$LoadInProgress value, $Res Function(_$LoadInProgress) then) =
-      __$$LoadInProgressCopyWithImpl<$Res>;
+abstract class _$$_LoadInProgressCopyWith<$Res> {
+  factory _$$_LoadInProgressCopyWith(
+          _$_LoadInProgress value, $Res Function(_$_LoadInProgress) then) =
+      __$$_LoadInProgressCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadInProgressCopyWithImpl<$Res>
-    extends _$NoteWatcherStateCopyWithImpl<$Res, _$LoadInProgress>
-    implements _$$LoadInProgressCopyWith<$Res> {
-  __$$LoadInProgressCopyWithImpl(
-      _$LoadInProgress _value, $Res Function(_$LoadInProgress) _then)
+class __$$_LoadInProgressCopyWithImpl<$Res>
+    extends _$NoteWatcherStateCopyWithImpl<$Res, _$_LoadInProgress>
+    implements _$$_LoadInProgressCopyWith<$Res> {
+  __$$_LoadInProgressCopyWithImpl(
+      _$_LoadInProgress _value, $Res Function(_$_LoadInProgress) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadInProgress implements LoadInProgress {
-  const _$LoadInProgress();
+class _$_LoadInProgress implements _LoadInProgress {
+  const _$_LoadInProgress();
 
   @override
   String toString() {
@@ -672,7 +673,7 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadInProgress);
+        (other.runtimeType == runtimeType && other is _$_LoadInProgress);
   }
 
   @override
@@ -718,10 +719,10 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(LoadSuccess value) loadSuccess,
-    required TResult Function(LoadFailure value) loadFailure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
     return loadInProgress(this);
   }
@@ -729,10 +730,10 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(LoadSuccess value)? loadSuccess,
-    TResult? Function(LoadFailure value)? loadFailure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
   }) {
     return loadInProgress?.call(this);
   }
@@ -740,10 +741,10 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(LoadSuccess value)? loadSuccess,
-    TResult Function(LoadFailure value)? loadFailure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
   }) {
     if (loadInProgress != null) {
@@ -753,25 +754,25 @@ class _$LoadInProgress implements LoadInProgress {
   }
 }
 
-abstract class LoadInProgress implements NoteWatcherState {
-  const factory LoadInProgress() = _$LoadInProgress;
+abstract class _LoadInProgress implements NoteWatcherState {
+  const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
 /// @nodoc
-abstract class _$$LoadSuccessCopyWith<$Res> {
-  factory _$$LoadSuccessCopyWith(
-          _$LoadSuccess value, $Res Function(_$LoadSuccess) then) =
-      __$$LoadSuccessCopyWithImpl<$Res>;
+abstract class _$$_LoadSuccessCopyWith<$Res> {
+  factory _$$_LoadSuccessCopyWith(
+          _$_LoadSuccess value, $Res Function(_$_LoadSuccess) then) =
+      __$$_LoadSuccessCopyWithImpl<$Res>;
   @useResult
   $Res call({KtList<NotesEntity> noteEntities});
 }
 
 /// @nodoc
-class __$$LoadSuccessCopyWithImpl<$Res>
-    extends _$NoteWatcherStateCopyWithImpl<$Res, _$LoadSuccess>
-    implements _$$LoadSuccessCopyWith<$Res> {
-  __$$LoadSuccessCopyWithImpl(
-      _$LoadSuccess _value, $Res Function(_$LoadSuccess) _then)
+class __$$_LoadSuccessCopyWithImpl<$Res>
+    extends _$NoteWatcherStateCopyWithImpl<$Res, _$_LoadSuccess>
+    implements _$$_LoadSuccessCopyWith<$Res> {
+  __$$_LoadSuccessCopyWithImpl(
+      _$_LoadSuccess _value, $Res Function(_$_LoadSuccess) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -779,7 +780,7 @@ class __$$LoadSuccessCopyWithImpl<$Res>
   $Res call({
     Object? noteEntities = null,
   }) {
-    return _then(_$LoadSuccess(
+    return _then(_$_LoadSuccess(
       null == noteEntities
           ? _value.noteEntities
           : noteEntities // ignore: cast_nullable_to_non_nullable
@@ -790,8 +791,8 @@ class __$$LoadSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadSuccess implements LoadSuccess {
-  const _$LoadSuccess(this.noteEntities);
+class _$_LoadSuccess implements _LoadSuccess {
+  const _$_LoadSuccess(this.noteEntities);
 
   @override
   final KtList<NotesEntity> noteEntities;
@@ -805,7 +806,7 @@ class _$LoadSuccess implements LoadSuccess {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadSuccess &&
+            other is _$_LoadSuccess &&
             (identical(other.noteEntities, noteEntities) ||
                 other.noteEntities == noteEntities));
   }
@@ -816,8 +817,8 @@ class _$LoadSuccess implements LoadSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadSuccessCopyWith<_$LoadSuccess> get copyWith =>
-      __$$LoadSuccessCopyWithImpl<_$LoadSuccess>(this, _$identity);
+  _$$_LoadSuccessCopyWith<_$_LoadSuccess> get copyWith =>
+      __$$_LoadSuccessCopyWithImpl<_$_LoadSuccess>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -859,10 +860,10 @@ class _$LoadSuccess implements LoadSuccess {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(LoadSuccess value) loadSuccess,
-    required TResult Function(LoadFailure value) loadFailure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
     return loadSuccess(this);
   }
@@ -870,10 +871,10 @@ class _$LoadSuccess implements LoadSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(LoadSuccess value)? loadSuccess,
-    TResult? Function(LoadFailure value)? loadFailure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
   }) {
     return loadSuccess?.call(this);
   }
@@ -881,10 +882,10 @@ class _$LoadSuccess implements LoadSuccess {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(LoadSuccess value)? loadSuccess,
-    TResult Function(LoadFailure value)? loadFailure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
   }) {
     if (loadSuccess != null) {
@@ -894,21 +895,21 @@ class _$LoadSuccess implements LoadSuccess {
   }
 }
 
-abstract class LoadSuccess implements NoteWatcherState {
-  const factory LoadSuccess(final KtList<NotesEntity> noteEntities) =
-      _$LoadSuccess;
+abstract class _LoadSuccess implements NoteWatcherState {
+  const factory _LoadSuccess(final KtList<NotesEntity> noteEntities) =
+      _$_LoadSuccess;
 
   KtList<NotesEntity> get noteEntities;
   @JsonKey(ignore: true)
-  _$$LoadSuccessCopyWith<_$LoadSuccess> get copyWith =>
+  _$$_LoadSuccessCopyWith<_$_LoadSuccess> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadFailureCopyWith<$Res> {
-  factory _$$LoadFailureCopyWith(
-          _$LoadFailure value, $Res Function(_$LoadFailure) then) =
-      __$$LoadFailureCopyWithImpl<$Res>;
+abstract class _$$_LoadFailureCopyWith<$Res> {
+  factory _$$_LoadFailureCopyWith(
+          _$_LoadFailure value, $Res Function(_$_LoadFailure) then) =
+      __$$_LoadFailureCopyWithImpl<$Res>;
   @useResult
   $Res call({NotesFailure notesFailure});
 
@@ -916,11 +917,11 @@ abstract class _$$LoadFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$LoadFailureCopyWithImpl<$Res>
-    extends _$NoteWatcherStateCopyWithImpl<$Res, _$LoadFailure>
-    implements _$$LoadFailureCopyWith<$Res> {
-  __$$LoadFailureCopyWithImpl(
-      _$LoadFailure _value, $Res Function(_$LoadFailure) _then)
+class __$$_LoadFailureCopyWithImpl<$Res>
+    extends _$NoteWatcherStateCopyWithImpl<$Res, _$_LoadFailure>
+    implements _$$_LoadFailureCopyWith<$Res> {
+  __$$_LoadFailureCopyWithImpl(
+      _$_LoadFailure _value, $Res Function(_$_LoadFailure) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -928,7 +929,7 @@ class __$$LoadFailureCopyWithImpl<$Res>
   $Res call({
     Object? notesFailure = null,
   }) {
-    return _then(_$LoadFailure(
+    return _then(_$_LoadFailure(
       null == notesFailure
           ? _value.notesFailure
           : notesFailure // ignore: cast_nullable_to_non_nullable
@@ -947,8 +948,8 @@ class __$$LoadFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadFailure implements LoadFailure {
-  const _$LoadFailure(this.notesFailure);
+class _$_LoadFailure implements _LoadFailure {
+  const _$_LoadFailure(this.notesFailure);
 
   @override
   final NotesFailure notesFailure;
@@ -962,7 +963,7 @@ class _$LoadFailure implements LoadFailure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadFailure &&
+            other is _$_LoadFailure &&
             (identical(other.notesFailure, notesFailure) ||
                 other.notesFailure == notesFailure));
   }
@@ -973,8 +974,8 @@ class _$LoadFailure implements LoadFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$LoadFailureCopyWith<_$LoadFailure> get copyWith =>
-      __$$LoadFailureCopyWithImpl<_$LoadFailure>(this, _$identity);
+  _$$_LoadFailureCopyWith<_$_LoadFailure> get copyWith =>
+      __$$_LoadFailureCopyWithImpl<_$_LoadFailure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1016,10 +1017,10 @@ class _$LoadFailure implements LoadFailure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(LoadSuccess value) loadSuccess,
-    required TResult Function(LoadFailure value) loadFailure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_LoadSuccess value) loadSuccess,
+    required TResult Function(_LoadFailure value) loadFailure,
   }) {
     return loadFailure(this);
   }
@@ -1027,10 +1028,10 @@ class _$LoadFailure implements LoadFailure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(LoadSuccess value)? loadSuccess,
-    TResult? Function(LoadFailure value)? loadFailure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_LoadSuccess value)? loadSuccess,
+    TResult? Function(_LoadFailure value)? loadFailure,
   }) {
     return loadFailure?.call(this);
   }
@@ -1038,10 +1039,10 @@ class _$LoadFailure implements LoadFailure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(LoadSuccess value)? loadSuccess,
-    TResult Function(LoadFailure value)? loadFailure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_LoadSuccess value)? loadSuccess,
+    TResult Function(_LoadFailure value)? loadFailure,
     required TResult orElse(),
   }) {
     if (loadFailure != null) {
@@ -1051,11 +1052,11 @@ class _$LoadFailure implements LoadFailure {
   }
 }
 
-abstract class LoadFailure implements NoteWatcherState {
-  const factory LoadFailure(final NotesFailure notesFailure) = _$LoadFailure;
+abstract class _LoadFailure implements NoteWatcherState {
+  const factory _LoadFailure(final NotesFailure notesFailure) = _$_LoadFailure;
 
   NotesFailure get notesFailure;
   @JsonKey(ignore: true)
-  _$$LoadFailureCopyWith<_$LoadFailure> get copyWith =>
+  _$$_LoadFailureCopyWith<_$_LoadFailure> get copyWith =>
       throw _privateConstructorUsedError;
 }

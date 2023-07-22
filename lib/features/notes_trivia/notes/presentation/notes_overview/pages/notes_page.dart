@@ -6,10 +6,10 @@ import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_action/note_a
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_watcher/note_watcher_bloc.dart';
 import 'package:notes_trivia/features/notes_trivia/notes/domain/entities/data/notes_entity.dart';
 import 'package:notes_trivia/injection.dart';
+import '../../../../../../core/router/app_router.dart';
 import 'notes_view.dart';
 import '../../../../auth/bloc/auth/auth_bloc.dart';
 import '../widgets/complete_or_uncomplete_switch_widget.dart';
-import '../../../../core/router/app_router.dart';
 
 @RoutePage()
 class NotesPage extends StatelessWidget {
@@ -39,17 +39,19 @@ class NotesPage extends StatelessWidget {
               );
             }),
           ),
+
           BlocListener<NoteActorBloc, NoteActorState>(
             listener: ((context, state) {
               state.maybeMap(
                 deleteFaliure: (state) => FlushbarHelper.createError(
-                    message: state.notesFailure.map(
-                  unexpectedFailure: (_) =>
-                      'Unexpected error happened. PLease try again',
-                  permissionDenied: (_) =>
-                      'Permission denied. PLease try again',
-                  noteNotFound: (_) => 'Note Not Found. PLease try again',
-                )).show(context),
+                  message: state.notesFailure.map(
+                    unexpectedFailure: (_) =>
+                        'Unexpected error happened. PLease try again',
+                    permissionDenied: (_) =>
+                        'Permission denied. PLease try again',
+                    noteNotFound: (_) => 'Note Not Found. PLease try again',
+                  ),
+                ).show(context),
                 orElse: () {},
               );
             }),

@@ -3,9 +3,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:notes_trivia/core/themes/size_config.dart';
 import 'package:flutter/material.dart';
-import 'package:notes_trivia/features/notes_trivia/auth/bloc/auth/auth_bloc.dart';
 
-import '../../../core/router/app_router.dart';
+import '../../../../../core/router/app_router.dart';
+import '../../bloc/auth/auth_bloc.dart';
 import '../../bloc/sign_in_form/sign_in_form_bloc.dart';
 import '../../domain/entities/failures/auth_failure.dart';
 
@@ -27,17 +27,16 @@ class _SignInViewState extends State<SignInView> {
           (either) => either.fold(
             (f) {
               FlushbarHelper.createError(
-                      message: f.map(
-                          cancelledByUser: (CancelledByUser value) =>
-                              'Cancelled',
-                          emailAlreadyInUse: (EmailAlreadyInUse value) =>
-                              'Email Already In Use',
-                          invalidEmailAndPasswordCombination:
-                              (InvalidEmailAndPasswordCombination value) =>
-                                  'Invalid Email And/Or Password',
-                          serverError: (ServerError value) => 'Server Error'),
-                      duration: const Duration(seconds: 3))
-                  .show(context);
+                message: f.map(
+                    cancelledByUser: (CancelledByUser value) => 'Cancelled',
+                    emailAlreadyInUse: (EmailAlreadyInUse value) =>
+                        'Email Already In Use',
+                    invalidEmailAndPasswordCombination:
+                        (InvalidEmailAndPasswordCombination value) =>
+                            'Invalid Email And/Or Password',
+                    serverError: (ServerError value) => 'Server Error'),
+                duration: const Duration(seconds: 3),
+              ).show(context);
             },
             (_) {
               context.router.replace(const NotesRoute());
@@ -108,7 +107,12 @@ class _SignInViewState extends State<SignInView> {
                       ));
                 },
                 validator: (_) {
-                  return context.watch<SignInFormBloc>().state.password.value.fold(
+                  return context
+                      .watch<SignInFormBloc>()
+                      .state
+                      .password
+                      .value
+                      .fold(
                         /*
                         (value) => value.f.maybeMap(
                           shortPassword: (_) => 'Short Password',

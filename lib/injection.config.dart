@@ -14,6 +14,8 @@ import 'package:firebase_auth/firebase_auth.dart' as _i4;
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:google_sign_in/google_sign_in.dart' as _i6;
 import 'package:injectable/injectable.dart' as _i2;
+import 'package:notes_trivia/core/firebase_injectable_module.dart' as _i16;
+import 'package:notes_trivia/core/router/app_router.dart' as _i3;
 import 'package:notes_trivia/features/notes_trivia/auth/bloc/auth/auth_bloc.dart'
     as _i15;
 import 'package:notes_trivia/features/notes_trivia/auth/bloc/sign_in_form/sign_in_form_bloc.dart'
@@ -22,10 +24,6 @@ import 'package:notes_trivia/features/notes_trivia/auth/domain/repository/auth_s
     as _i10;
 import 'package:notes_trivia/features/notes_trivia/auth/infrastructure/datasources/firebase_auth_provider.dart'
     as _i11;
-import 'package:notes_trivia/features/notes_trivia/core/firebase_injectable_module.dart'
-    as _i16;
-import 'package:notes_trivia/features/notes_trivia/core/router/app_router.dart'
-    as _i3;
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_action/note_actor_bloc.dart'
     as _i12;
 import 'package:notes_trivia/features/notes_trivia/notes/bloc/note_form/note_form_bloc.dart'

@@ -260,26 +260,26 @@ mixin _$NoteActorState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(DeleteSuccess value) deleteSuccess,
-    required TResult Function(DeleteFaliure value) deleteFaliure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_DeleteSuccess value) deleteSuccess,
+    required TResult Function(_DeleteFaliure value) deleteFaliure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(DeleteSuccess value)? deleteSuccess,
-    TResult? Function(DeleteFaliure value)? deleteFaliure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_DeleteSuccess value)? deleteSuccess,
+    TResult? Function(_DeleteFaliure value)? deleteFaliure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(DeleteSuccess value)? deleteSuccess,
-    TResult Function(DeleteFaliure value)? deleteFaliure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_DeleteSuccess value)? deleteSuccess,
+    TResult Function(_DeleteFaliure value)? deleteFaliure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -304,23 +304,24 @@ class _$NoteActorStateCopyWithImpl<$Res, $Val extends NoteActorState>
 }
 
 /// @nodoc
-abstract class _$$InitialCopyWith<$Res> {
-  factory _$$InitialCopyWith(_$Initial value, $Res Function(_$Initial) then) =
-      __$$InitialCopyWithImpl<$Res>;
+abstract class _$$_InitialCopyWith<$Res> {
+  factory _$$_InitialCopyWith(
+          _$_Initial value, $Res Function(_$_Initial) then) =
+      __$$_InitialCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$InitialCopyWithImpl<$Res>
-    extends _$NoteActorStateCopyWithImpl<$Res, _$Initial>
-    implements _$$InitialCopyWith<$Res> {
-  __$$InitialCopyWithImpl(_$Initial _value, $Res Function(_$Initial) _then)
+class __$$_InitialCopyWithImpl<$Res>
+    extends _$NoteActorStateCopyWithImpl<$Res, _$_Initial>
+    implements _$$_InitialCopyWith<$Res> {
+  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$Initial implements Initial {
-  const _$Initial();
+class _$_Initial implements _Initial {
+  const _$_Initial();
 
   @override
   String toString() {
@@ -330,7 +331,7 @@ class _$Initial implements Initial {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$Initial);
+        (other.runtimeType == runtimeType && other is _$_Initial);
   }
 
   @override
@@ -376,10 +377,10 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(DeleteSuccess value) deleteSuccess,
-    required TResult Function(DeleteFaliure value) deleteFaliure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_DeleteSuccess value) deleteSuccess,
+    required TResult Function(_DeleteFaliure value) deleteFaliure,
   }) {
     return initial(this);
   }
@@ -387,10 +388,10 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(DeleteSuccess value)? deleteSuccess,
-    TResult? Function(DeleteFaliure value)? deleteFaliure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_DeleteSuccess value)? deleteSuccess,
+    TResult? Function(_DeleteFaliure value)? deleteFaliure,
   }) {
     return initial?.call(this);
   }
@@ -398,10 +399,10 @@ class _$Initial implements Initial {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(DeleteSuccess value)? deleteSuccess,
-    TResult Function(DeleteFaliure value)? deleteFaliure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_DeleteSuccess value)? deleteSuccess,
+    TResult Function(_DeleteFaliure value)? deleteFaliure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -411,30 +412,30 @@ class _$Initial implements Initial {
   }
 }
 
-abstract class Initial implements NoteActorState {
-  const factory Initial() = _$Initial;
+abstract class _Initial implements NoteActorState {
+  const factory _Initial() = _$_Initial;
 }
 
 /// @nodoc
-abstract class _$$LoadInProgressCopyWith<$Res> {
-  factory _$$LoadInProgressCopyWith(
-          _$LoadInProgress value, $Res Function(_$LoadInProgress) then) =
-      __$$LoadInProgressCopyWithImpl<$Res>;
+abstract class _$$_LoadInProgressCopyWith<$Res> {
+  factory _$$_LoadInProgressCopyWith(
+          _$_LoadInProgress value, $Res Function(_$_LoadInProgress) then) =
+      __$$_LoadInProgressCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$LoadInProgressCopyWithImpl<$Res>
-    extends _$NoteActorStateCopyWithImpl<$Res, _$LoadInProgress>
-    implements _$$LoadInProgressCopyWith<$Res> {
-  __$$LoadInProgressCopyWithImpl(
-      _$LoadInProgress _value, $Res Function(_$LoadInProgress) _then)
+class __$$_LoadInProgressCopyWithImpl<$Res>
+    extends _$NoteActorStateCopyWithImpl<$Res, _$_LoadInProgress>
+    implements _$$_LoadInProgressCopyWith<$Res> {
+  __$$_LoadInProgressCopyWithImpl(
+      _$_LoadInProgress _value, $Res Function(_$_LoadInProgress) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$LoadInProgress implements LoadInProgress {
-  const _$LoadInProgress();
+class _$_LoadInProgress implements _LoadInProgress {
+  const _$_LoadInProgress();
 
   @override
   String toString() {
@@ -444,7 +445,7 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadInProgress);
+        (other.runtimeType == runtimeType && other is _$_LoadInProgress);
   }
 
   @override
@@ -490,10 +491,10 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(DeleteSuccess value) deleteSuccess,
-    required TResult Function(DeleteFaliure value) deleteFaliure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_DeleteSuccess value) deleteSuccess,
+    required TResult Function(_DeleteFaliure value) deleteFaliure,
   }) {
     return loadInProgress(this);
   }
@@ -501,10 +502,10 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(DeleteSuccess value)? deleteSuccess,
-    TResult? Function(DeleteFaliure value)? deleteFaliure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_DeleteSuccess value)? deleteSuccess,
+    TResult? Function(_DeleteFaliure value)? deleteFaliure,
   }) {
     return loadInProgress?.call(this);
   }
@@ -512,10 +513,10 @@ class _$LoadInProgress implements LoadInProgress {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(DeleteSuccess value)? deleteSuccess,
-    TResult Function(DeleteFaliure value)? deleteFaliure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_DeleteSuccess value)? deleteSuccess,
+    TResult Function(_DeleteFaliure value)? deleteFaliure,
     required TResult orElse(),
   }) {
     if (loadInProgress != null) {
@@ -525,30 +526,30 @@ class _$LoadInProgress implements LoadInProgress {
   }
 }
 
-abstract class LoadInProgress implements NoteActorState {
-  const factory LoadInProgress() = _$LoadInProgress;
+abstract class _LoadInProgress implements NoteActorState {
+  const factory _LoadInProgress() = _$_LoadInProgress;
 }
 
 /// @nodoc
-abstract class _$$DeleteSuccessCopyWith<$Res> {
-  factory _$$DeleteSuccessCopyWith(
-          _$DeleteSuccess value, $Res Function(_$DeleteSuccess) then) =
-      __$$DeleteSuccessCopyWithImpl<$Res>;
+abstract class _$$_DeleteSuccessCopyWith<$Res> {
+  factory _$$_DeleteSuccessCopyWith(
+          _$_DeleteSuccess value, $Res Function(_$_DeleteSuccess) then) =
+      __$$_DeleteSuccessCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$DeleteSuccessCopyWithImpl<$Res>
-    extends _$NoteActorStateCopyWithImpl<$Res, _$DeleteSuccess>
-    implements _$$DeleteSuccessCopyWith<$Res> {
-  __$$DeleteSuccessCopyWithImpl(
-      _$DeleteSuccess _value, $Res Function(_$DeleteSuccess) _then)
+class __$$_DeleteSuccessCopyWithImpl<$Res>
+    extends _$NoteActorStateCopyWithImpl<$Res, _$_DeleteSuccess>
+    implements _$$_DeleteSuccessCopyWith<$Res> {
+  __$$_DeleteSuccessCopyWithImpl(
+      _$_DeleteSuccess _value, $Res Function(_$_DeleteSuccess) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$DeleteSuccess implements DeleteSuccess {
-  const _$DeleteSuccess();
+class _$_DeleteSuccess implements _DeleteSuccess {
+  const _$_DeleteSuccess();
 
   @override
   String toString() {
@@ -558,7 +559,7 @@ class _$DeleteSuccess implements DeleteSuccess {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$DeleteSuccess);
+        (other.runtimeType == runtimeType && other is _$_DeleteSuccess);
   }
 
   @override
@@ -604,10 +605,10 @@ class _$DeleteSuccess implements DeleteSuccess {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(DeleteSuccess value) deleteSuccess,
-    required TResult Function(DeleteFaliure value) deleteFaliure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_DeleteSuccess value) deleteSuccess,
+    required TResult Function(_DeleteFaliure value) deleteFaliure,
   }) {
     return deleteSuccess(this);
   }
@@ -615,10 +616,10 @@ class _$DeleteSuccess implements DeleteSuccess {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(DeleteSuccess value)? deleteSuccess,
-    TResult? Function(DeleteFaliure value)? deleteFaliure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_DeleteSuccess value)? deleteSuccess,
+    TResult? Function(_DeleteFaliure value)? deleteFaliure,
   }) {
     return deleteSuccess?.call(this);
   }
@@ -626,10 +627,10 @@ class _$DeleteSuccess implements DeleteSuccess {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(DeleteSuccess value)? deleteSuccess,
-    TResult Function(DeleteFaliure value)? deleteFaliure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_DeleteSuccess value)? deleteSuccess,
+    TResult Function(_DeleteFaliure value)? deleteFaliure,
     required TResult orElse(),
   }) {
     if (deleteSuccess != null) {
@@ -639,15 +640,15 @@ class _$DeleteSuccess implements DeleteSuccess {
   }
 }
 
-abstract class DeleteSuccess implements NoteActorState {
-  const factory DeleteSuccess() = _$DeleteSuccess;
+abstract class _DeleteSuccess implements NoteActorState {
+  const factory _DeleteSuccess() = _$_DeleteSuccess;
 }
 
 /// @nodoc
-abstract class _$$DeleteFaliureCopyWith<$Res> {
-  factory _$$DeleteFaliureCopyWith(
-          _$DeleteFaliure value, $Res Function(_$DeleteFaliure) then) =
-      __$$DeleteFaliureCopyWithImpl<$Res>;
+abstract class _$$_DeleteFaliureCopyWith<$Res> {
+  factory _$$_DeleteFaliureCopyWith(
+          _$_DeleteFaliure value, $Res Function(_$_DeleteFaliure) then) =
+      __$$_DeleteFaliureCopyWithImpl<$Res>;
   @useResult
   $Res call({NotesFailure notesFailure});
 
@@ -655,11 +656,11 @@ abstract class _$$DeleteFaliureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$DeleteFaliureCopyWithImpl<$Res>
-    extends _$NoteActorStateCopyWithImpl<$Res, _$DeleteFaliure>
-    implements _$$DeleteFaliureCopyWith<$Res> {
-  __$$DeleteFaliureCopyWithImpl(
-      _$DeleteFaliure _value, $Res Function(_$DeleteFaliure) _then)
+class __$$_DeleteFaliureCopyWithImpl<$Res>
+    extends _$NoteActorStateCopyWithImpl<$Res, _$_DeleteFaliure>
+    implements _$$_DeleteFaliureCopyWith<$Res> {
+  __$$_DeleteFaliureCopyWithImpl(
+      _$_DeleteFaliure _value, $Res Function(_$_DeleteFaliure) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -667,7 +668,7 @@ class __$$DeleteFaliureCopyWithImpl<$Res>
   $Res call({
     Object? notesFailure = null,
   }) {
-    return _then(_$DeleteFaliure(
+    return _then(_$_DeleteFaliure(
       null == notesFailure
           ? _value.notesFailure
           : notesFailure // ignore: cast_nullable_to_non_nullable
@@ -686,8 +687,8 @@ class __$$DeleteFaliureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$DeleteFaliure implements DeleteFaliure {
-  const _$DeleteFaliure(this.notesFailure);
+class _$_DeleteFaliure implements _DeleteFaliure {
+  const _$_DeleteFaliure(this.notesFailure);
 
   @override
   final NotesFailure notesFailure;
@@ -701,7 +702,7 @@ class _$DeleteFaliure implements DeleteFaliure {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$DeleteFaliure &&
+            other is _$_DeleteFaliure &&
             (identical(other.notesFailure, notesFailure) ||
                 other.notesFailure == notesFailure));
   }
@@ -712,8 +713,8 @@ class _$DeleteFaliure implements DeleteFaliure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeleteFaliureCopyWith<_$DeleteFaliure> get copyWith =>
-      __$$DeleteFaliureCopyWithImpl<_$DeleteFaliure>(this, _$identity);
+  _$$_DeleteFaliureCopyWith<_$_DeleteFaliure> get copyWith =>
+      __$$_DeleteFaliureCopyWithImpl<_$_DeleteFaliure>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -755,10 +756,10 @@ class _$DeleteFaliure implements DeleteFaliure {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(Initial value) initial,
-    required TResult Function(LoadInProgress value) loadInProgress,
-    required TResult Function(DeleteSuccess value) deleteSuccess,
-    required TResult Function(DeleteFaliure value) deleteFaliure,
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_LoadInProgress value) loadInProgress,
+    required TResult Function(_DeleteSuccess value) deleteSuccess,
+    required TResult Function(_DeleteFaliure value) deleteFaliure,
   }) {
     return deleteFaliure(this);
   }
@@ -766,10 +767,10 @@ class _$DeleteFaliure implements DeleteFaliure {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(Initial value)? initial,
-    TResult? Function(LoadInProgress value)? loadInProgress,
-    TResult? Function(DeleteSuccess value)? deleteSuccess,
-    TResult? Function(DeleteFaliure value)? deleteFaliure,
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_LoadInProgress value)? loadInProgress,
+    TResult? Function(_DeleteSuccess value)? deleteSuccess,
+    TResult? Function(_DeleteFaliure value)? deleteFaliure,
   }) {
     return deleteFaliure?.call(this);
   }
@@ -777,10 +778,10 @@ class _$DeleteFaliure implements DeleteFaliure {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(Initial value)? initial,
-    TResult Function(LoadInProgress value)? loadInProgress,
-    TResult Function(DeleteSuccess value)? deleteSuccess,
-    TResult Function(DeleteFaliure value)? deleteFaliure,
+    TResult Function(_Initial value)? initial,
+    TResult Function(_LoadInProgress value)? loadInProgress,
+    TResult Function(_DeleteSuccess value)? deleteSuccess,
+    TResult Function(_DeleteFaliure value)? deleteFaliure,
     required TResult orElse(),
   }) {
     if (deleteFaliure != null) {
@@ -790,12 +791,12 @@ class _$DeleteFaliure implements DeleteFaliure {
   }
 }
 
-abstract class DeleteFaliure implements NoteActorState {
-  const factory DeleteFaliure(final NotesFailure notesFailure) =
-      _$DeleteFaliure;
+abstract class _DeleteFaliure implements NoteActorState {
+  const factory _DeleteFaliure(final NotesFailure notesFailure) =
+      _$_DeleteFaliure;
 
   NotesFailure get notesFailure;
   @JsonKey(ignore: true)
-  _$$DeleteFaliureCopyWith<_$DeleteFaliure> get copyWith =>
+  _$$_DeleteFaliureCopyWith<_$_DeleteFaliure> get copyWith =>
       throw _privateConstructorUsedError;
 }

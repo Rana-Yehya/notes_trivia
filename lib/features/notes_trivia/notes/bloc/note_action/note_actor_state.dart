@@ -2,10 +2,10 @@ part of 'note_actor_bloc.dart';
 
 @freezed
 class NoteActorState with _$NoteActorState {
-  const factory NoteActorState.initial() = Initial;
-  const factory NoteActorState.loadInProgress() = LoadInProgress;
+  const factory NoteActorState.initial() = _Initial;
+  const factory NoteActorState.loadInProgress() = _LoadInProgress;
   const factory NoteActorState.deleteSuccess() =
-      DeleteSuccess;
+      _DeleteSuccess;
   const factory NoteActorState.deleteFaliure(NotesFailure notesFailure) =
-      DeleteFaliure;
+      _DeleteFaliure;
 }

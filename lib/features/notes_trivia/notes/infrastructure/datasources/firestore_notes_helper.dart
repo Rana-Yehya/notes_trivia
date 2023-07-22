@@ -1,8 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import '../../../../../core/failures/errors.dart';
 import '../../../../../injection.dart';
 import '../../../auth/domain/repository/auth_service.dart';
-import '../../../core/failures/errors.dart';
+
 
 extension FirebaseFirestoreX on FirebaseFirestore {
   Future<DocumentReference> getDocument() async {
